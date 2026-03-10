@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<!-- saved from url=(0017)https://ff.io/api -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>API | FixedFloat</title>
+	<meta name="description" content="Section for developers. API for cryptocurrency exchange: Get Currencies, Get Pair, Get Price, Get Order, Create Order.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta property="og:image" content="https://ff.io/assets/images/public/ogimage.jpg">
+	<meta property="og:site_name" content="FixedFloat">
+	<link rel="shortcut icon" href="https://ff.io/assets/images/favicon.png">
+	<meta name="title" content="API | FixedFloat">
+	<meta property="og:title" content="API | FixedFloat">
+	<meta property="og:description" content="Section for developers. API for cryptocurrency exchange: Get Currencies, Get Pair, Get Price, Get Order, Create Order.">
+	<link rel="apple-touch-icon" sizes="57x57" href="images/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="117x117" href="images/apple-touch-icon-117x117.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon-180x180.png">
+	<link rel="alternate" hreflang="en" href="https://ff.io/en/">
+	<link rel="alternate" hreflang="es" href="https://ff.io/es/">
+	<link rel="alternate" hreflang="de" href="https://ff.io/de/">
+	<link rel="alternate" hreflang="fr" href="https://ff.io/fr/">
+	<link rel="alternate" hreflang="pt" href="https://ff.io/pt/">
+	<link rel="alternate" hreflang="ru" href="https://ff.io/ru/">
+	<link rel="alternate" hreflang="pl" href="https://ff.io/pl/">
+	<link rel="alternate" hreflang="nl" href="https://ff.io/nl/">
+	<link rel="alternate" hreflang="ua" href="https://ff.io/ua/">
+	<link rel="alternate" hreflang="tr" href="https://ff.io/tr/">
+	<link rel="alternate" hreflang="it" href="https://ff.io/it/">
+	<link rel="alternate" hreflang="cn" href="https://ff.io/cn/">
+	<link rel="alternate" hreflang="ko" href="https://ff.io/ko/">
+	<link rel="alternate" hreflang="ja" href="https://ff.io/ja/">
+	<link rel="alternate" hreflang="x-default" href="https://ff.io/">
+	<link rel="preload" href="/assets/fonts/montserrat/latin/montserrat-v25-latin-300.woff2" as="font" type="font/woff2" crossorigin="">
+	<link rel="preload" href="/assets/fonts/montserrat/latin/montserrat-v25-latin-regular.woff2" as="font" type="font/woff2" crossorigin="">
+	<link rel="preload" href="/assets/fonts/montserrat/latin/montserrat-v25-latin-500.woff2" as="font" type="font/woff2" crossorigin="">
+	<link rel="preload" href="/assets/fonts/montserrat/latin/montserrat-v25-latin-600.woff2" as="font" type="font/woff2" crossorigin="">
+	<link rel="preload" href="/assets/fonts/montserrat/latin/montserrat-v25-latin-700.woff2" as="font" type="font/woff2" crossorigin="">
+	<link rel="preload" href="/assets/fonts/fficons/fficons.woff2?101128" as="font" type="font/woff2" crossorigin="">
+	<style type="text/css">
+		@font-face {
+			font-family: 'Icons';
+			font-display: block;
+			src: url("fonts/fficons.woff2") format("woff2"), 
+			     url("fonts/fficons.woff") format("woff"), 
+			     url("fonts/fficons.ttf") format("truetype");
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="css/min.css">
+	<script type="text/javascript" src="js/min.js"></script>
+    <script type="text/javascript" src="js/matter.min.js" defer=""></script>
+    <script type="text/javascript" src="js/exchange.min.js"></script>
+	<script type="text/javascript" src="js/moment.min.js" defer=""></script>
+	<script type="text/javascript" src="js/jsqr.js" defer=""></script>
+	<script type="text/javascript" src="js/webln.min.js" defer=""></script>
+	<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-125458753-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-125458753-1');
+	</script>
+<script id="freshchat-js-sdk" async="" src="./API _ FixedFloat_files/widget.js.download"></script><link href="./API _ FixedFloat_files/widget.css" rel="stylesheet"></head>
+<body class="index darkbg">
+	<script type="text/javascript">
+		let localTheme = localStorage.getItem('theme');
+		let currTheme  = localTheme ? localTheme : "dark";
+		window.themeLight = currTheme == 'light' ? true : false;
+		document.body.className += (document.body.className ? ' ' : '') + currTheme+'bg';
+	</script>
+	<script
+	src='//fw-cdn.com/15814066/6939803.js'
+	chat='true'>
+	</script>
+	<style id="highlighting_style"></style>
+	<header id="header">
+		<div class="wrapper">
+			<div class="left-menu-wrap" id="left_menu_wrap">
+				<div id="left_menu_btn">
+					<div><span></span><span></span><span></span></div>
+				</div>
+				<nav class="left-menu" id="left_menu">
+					<div class="theme-switch-wrap">
+						<label class="theme-switch">
+							<input type="checkbox" name="themelight" id="themelight_switch_mobile">
+							<span><i class="ico"></i></span>
+						</label>
+					</div>
+					<section>
+						<ul id="left_menu_content" class="menu linkhl">
+							<li class="menu-head"><span>Account</span></li>
+													<li><a href="/user/signin">Sign in</a></li>
+							<li><a href="/user/signup">Sign up</a></li>
+													<li class="menu-head"><span>FixedFloat</span></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="blog.html">Blog</a></li>
+							<li><a href="faq.html">FAQ</a></li>
+							<li><a href="api.html">API</a></li>
+							<li><a href="support.html">Support</a></li>
+													<li><a href="affiliate.html">Affiliate program</a></li>
+						                            <li><a href="brand.html">Our brand</a></li>
+							<li class="menu-head"><span>Rules</span></li>
+                            <li><a href="terms-of-service.html">Terms of Service</a></li>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="affiliate-program-terms.html">Affiliate Program Terms</a></li>
+                            <li><a href="api-terms.html">API Terms of Use</a></li>
+						</ul>
+					</section>
+				</nav>
+			</div>
+			<nav>
+								<a href="index.html" id="logo" class="logo">
+					<span class="logo-text-fixed" id="logo_text_from"></span><div class="ico"><span class="logo-arrow-from" id="logo_arrow_from"></span><span class="logo-arrow-to" id="logo_arrow_to"></span></div><span class="logo-text-float" id="logo_text_to"></span>
+				</a>
+				<div class="nav-right">
+					<ul class="nav menu hoverhl">
+						<li><a href="about.html">About</a></li>
+						<li><a href="blog.html">Blog</a></li>
+						<li><a href="faq.html">FAQ</a></li>
+						<li><a href="api.html">API</a></li>
+						<li><a href="support.html">Support</a></li>
+					</ul>
+									<div class="loc hoverhl">
+						<a class="menu-focus-btn" tabindex="0"><div class="ui-select-value"><i class="loc-img loc-en"></i></div></a>
+						<div class="menu-focus-opened">
+							<ul class="hoverhl" id="loc_menu_wrap">
+																	<li><a href="/en/"><i class="loc-img loc-en"></i><span>English</span></a></li>
+																	<li><a href="/es/"><i class="loc-img loc-es"></i><span>Español</span></a></li>
+																	<li><a href="/de/"><i class="loc-img loc-de"></i><span>Deutsch</span></a></li>
+																	<li><a href="/fr/"><i class="loc-img loc-fr"></i><span>Français</span></a></li>
+																	<li><a href="/pt/"><i class="loc-img loc-pt"></i><span>Português</span></a></li>
+																	<li><a href="/ru/"><i class="loc-img loc-ru"></i><span>Русский</span></a></li>
+																	<li><a href="/pl/"><i class="loc-img loc-pl"></i><span>Polski</span></a></li>
+																	<li><a href="/nl/"><i class="loc-img loc-nl"></i><span>Nederlands</span></a></li>
+																	<li><a href="/ua/"><i class="loc-img loc-ua"></i><span>Украïнська</span></a></li>
+																	<li><a href="/tr/"><i class="loc-img loc-tr"></i><span>Türkçe</span></a></li>
+																	<li><a href="/it/"><i class="loc-img loc-it"></i><span>Italiano</span></a></li>
+																	<li><a href="/cn/"><i class="loc-img loc-cn"></i><span>中文</span></a></li>
+																	<li><a href="/ko/"><i class="loc-img loc-ko"></i><span>한국어</span></a></li>
+																	<li><a href="/ja/"><i class="loc-img loc-ja"></i><span>日本の</span></a></li>
+															</ul>
+						</div>
+						<div class="shadow-body" tabindex="0"></div>
+					</div>
+					<div class="theme-switch-wrap">
+						<label class="theme-switch">
+							<input type="checkbox" name="themelight" id="themelight_switch">
+							<span><i class="ico"></i></span>
+						</label>
+						<script type="text/javascript">
+						    if (window.themeLight) {
+						    	document.getElementById('themelight_switch').checked = true;
+						    	document.getElementById('themelight_switch_mobile').checked = true;
+						    }
+						</script>
+					</div>
+													<div class="nav userbar hoverhl">
+						<a id="header_signin" class="btn-text" href="/user/signin">Sign in</a>
+						<a id="header_signup" class="btn" href="/user/signup">Sign up</a>
+					</div>
+								</div>
+			</nav>
+			<div class="shadow-body"></div>
+		</div>
+	</header>
+		<aside class="api-table-of-content leftfixed">
+		<div class="api-table-of-content-header"><h1>API FixedFloat</h1></div>
+		<div class="api-table-of-content-active"><span id="api_active_menuitem">Exchange rate</span></div>
+		<ul class="list-aside" id="api_table_of_content">
+			<li class="list-head" data-id="api_intro"><a href="https://ff.io/api#api_intro">Introduction</a></li>
+			<li class="list-head" data-id="api_getkey"><a href="https://ff.io/api#api_getkey">Getting the API key</a></li>
+			<li class="list-head" data-id="api_example"><a href="https://ff.io/api#api_example">Request and example</a></li>
+			<li class="list-head" data-id="api_limits"><a href="https://ff.io/api#api_limits">Request limits</a></li>
+			<li class="list-head" data-id="api_libraries"><a href="https://ff.io/api#api_libraries">Official Libraries</a></li>
+			<li class="list-head deepactive" data-id="api_methods"><a href="https://ff.io/api#api_methods">Methods</a></li>
+			<ul class="deep">
+				<li class="list-head" data-id="method_xmlexport"><a href="https://ff.io/api#method_xmlexport">XML export file of rates</a></li>
+				<li class="list-head" data-id="method_ccies"><a href="https://ff.io/api#method_ccies">Available currencies</a></li>
+				<li class="list-head active" data-id="method_price"><a href="https://ff.io/api#method_price">Exchange rate</a></li>
+				<li class="list-head" data-id="method_create"><a href="https://ff.io/api#method_create">Create order</a></li>
+				<li class="list-head" data-id="method_order"><a href="https://ff.io/api#method_order">Get order details</a></li>
+				<li class="list-head" data-id="method_emergency"><a href="https://ff.io/api#method_emergency">Emergency Action Choice</a></li>
+				<li class="list-head" data-id="method_setemail"><a href="https://ff.io/api#method_setemail">Subscribe to notification</a></li>
+				<li class="list-head" data-id="method_qr"><a href="https://ff.io/api#method_qr">Images of QR codes</a></li>
+			</ul>
+		</ul>
+	</aside>
+	<main>
+		<section class="content api-content">
+			<section class="api-section" id="api_intro">
+				<section class="api-description-section">
+					<div class="api-description">
+						<h2>Introduction</h2>
+						<p>The FixedFloat API allows you to automate the receipt of information about the exchange rates of currencies, created orders, presented on the FixedFloat service, create orders and manage them using it.</p>
+<p>To use the FixedFloat API, you need to get an API key and an API secret.</p>					</div>
+				</section>
+			</section>
+			<section class="api-section" id="api_getkey">
+				<section class="api-description-section">
+					<div class="api-description">
+						<h2>Getting the API key</h2>
+						<p>To get an API Key and API Secret, follow these steps:</p>
+<ol><li><a href="https://ff.io/user/signin">Sign in</a> or <a href="https://ff.io/user/signup">Register</a> in the FixedFloat</li>
+<li>Go to the <a href="https://ff.io/user/apikey">API management</a> section</li>
+<li>Click the "<b>Generate</b>" button and follow the instructions in the window that appears</li>
+<li>Copy the <b>API Key</b> and <b>API Secret</b> and keep them in a safe place. Use these parameters for requests to the FixedFloat API</li>
+</ol>					</div>
+				</section>
+			</section>
+			<!--  -->
+			<section class="api-section" id="api_example">
+				<section class="api-description-section">
+					<div class="api-description">
+						<h2>Request and example</h2>
+						<p>The sent data must be in JSON format with UTF-8 encoding.</p>
+<p>For successful API requests, all requests must contain a few mandatory headers:</p>
+<ul class="with-marker"><li>The <span class="api-p-header">Content-Type</span> header must be application/json; charset=UTF-8</li>
+<li>The <span class="api-p-header">X-API-KEY</span> header should contain your received API Key (<span class="api-code-curl-const">YOUR_API_KEY</span>)</li>
+<li>The <span class="api-p-header">X-API-SIGN</span> header must contain the signature <span class="api-code-curl-const">GENERATED_SIGN</span>. To get the signature you must use your API Secret (<span class="api-code-curl-const">YOUR_API_SECRET</span>) as the HMAC SHA256 operation key and the json data string as the value.</li>
+</ul>					</div>
+					<div class="api-example"><div class="api-example-title"><span>X-API-SIGN generation</span></div>
+<div class="api-example-tabs">
+	<label class="active" data-lang="curl">Curl</label>
+	<label data-lang="python">Python</label>
+	<label data-lang="php">PHP</label>
+</div>
+<div class="api-example-code-wrapper">
+	<div class="api-example-code active" data-lang="curl">
+		<code>
+			<pre>[linux]$ echo -n '<span class="api-code-curl-const">DATA_JSON</span>' | openssl dgst -sha256 -hmac "<span class="api-code-curl-const">YOUR_API_SECRET</span>"</pre>
+			<pre>(stdin)= <span class="api-code-curl-const">GENERATED_SIGN</span></pre>
+		</code>
+		<code>
+			<pre><span class="api-code-curl-f">cURL</span> <span class="api-code-curl-h">-X</span> <span class="api-code-curl-x">POST</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"Accept: application/json"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"X-API-KEY: <span class="api-code-curl-const">YOUR_API_KEY</span>"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"X-API-SIGN: <span class="api-code-curl-const">GENERATED_SIGN</span>"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"Content-Type: application/json; charset=UTF-8"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-d</span> <span class="api-code-curl-txt">'<span class="api-code-curl-const">DATA_JSON</span>'</span></pre>  
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-link">"https://ff.io/api/v2/<span class="api-code-curl-const">METHOD</span>"</span> <span class="api-code-curl-h">-L</span></pre>
+		</code>
+	</div>
+	<div class="api-example-code" data-lang="python">
+		<code>
+			<pre><span class="api-code-py-f">import</span> hmac</pre>
+			<pre><span class="api-code-py-f">import</span> json</pre>
+			<pre><span class="api-code-py-f">import</span> hashlib</pre>
+			<pre><span class="api-code-py-f">import</span> requests</pre>
+			<pre>&nbsp;&nbsp;</pre>
+			<pre><span class="api-code-py-u">def</span> <span class="api-code-py-fn">sign</span>(data):</pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-py-u">return</span> hmac.<span class="api-code-py-f">new</span>(</pre>
+			<pre>&nbsp;&nbsp;&nbsp;&nbsp;key<span class="api-code-py-u">=</span><span class="api-code-curl-const">YOUR_API_SECRET</span>.<span class="api-code-py-f">encode</span>(),</pre>
+			<pre>&nbsp;&nbsp;&nbsp;&nbsp;msg<span class="api-code-py-u">=</span>data.<span class="api-code-py-f">encode</span>(),</pre>
+			<pre>&nbsp;&nbsp;&nbsp;&nbsp;digestmod<span class="api-code-py-u">=</span>hashlib.sha256</pre>
+			<pre>&nbsp;&nbsp;).<span class="api-code-py-f">hexdigest</span>()</pre>
+			<pre>&nbsp;&nbsp;</pre>
+			<pre>&nbsp;&nbsp;</pre>
+			<pre><span class="api-code-py-u">def</span> <span class="api-code-py-fn">request</span>(method, params={}):</pre>
+			<pre>&nbsp;&nbsp;url <span class="api-code-py-u">=</span> 'https://ff.io/api/v2/' + method</pre>
+			<pre>&nbsp;&nbsp;data <span class="api-code-py-u">=</span> json.<span class="api-code-py-f">dumps</span>(params)</pre>
+			<pre>&nbsp;&nbsp;headers <span class="api-code-py-u">=</span> {</pre>
+			<pre>&nbsp;&nbsp;&nbsp;&nbsp;'X-API-KEY':  <span class="api-code-curl-const">YOUR_API_KEY</span>,</pre>
+			<pre>&nbsp;&nbsp;&nbsp;&nbsp;'X-API-SIGN': <span class="api-code-py-f">sign</span>(data)</pre>
+			<pre>&nbsp;&nbsp;}</pre>
+			<pre>&nbsp;&nbsp;r <span class="api-code-py-u">=</span> requests.<span class="api-code-py-f">post</span>(url, data=data, headers=headers)</pre>
+			<pre>&nbsp;&nbsp;return r.<span class="api-code-py-f">json</span>()</pre>
+			<pre>&nbsp;&nbsp;</pre>
+			<pre><span class="api-code-py-f">request</span>(<span class="api-code-curl-const">METHOD</span>, <span class="api-code-curl-const">DATA</span>)</pre>
+		</code>
+	</div>
+	<div class="api-example-code" data-lang="php">
+		<code>
+			<pre><span class="api-code-php-p">&lt;?php</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-php-f">function</span> <span class="api-code-php-f">sign</span>(<span class="api-code-php-svar">$</span>data) {</pre>
+			<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-f">return</span> <span class="api-code-php-u">hash_hmac</span>(<span class="api-code-php-txt">'sha256'</span>, <span class="api-code-php-svar">$</span>data, <span class="api-code-php-const">YOUR_API_SECRET</span>);</pre>
+			<pre>&nbsp;&nbsp;}</pre>
+			<pre>&nbsp;&nbsp;</pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-php-f">function</span> <span class="api-code-php-f">request</span>(<span class="api-code-php-svar">$</span>method, <span class="api-code-php-svar">$</span>data) {</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-svar">$</span>url = <span class="api-code-php-txt">'https://ff.io/api/v2/'</span>.<span class="api-code-php-svar">$</span>method;</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-svar">$</span>req = <span class="api-code-php-u">json_encode</span>(<span class="api-code-php-svar">$</span>data);</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-svar">$</span>ch = <span class="api-code-php-u">curl_init</span>();</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-u">curl_setopt</span>(<span class="api-code-php-svar">$</span>ch, <span class="api-code-php-iconst">CURLOPT_URL</span>, <span class="api-code-php-svar">$</span>url);</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-u">curl_setopt</span>(<span class="api-code-php-svar">$</span>ch, <span class="api-code-php-iconst">CURLOPT_RETURNTRANSFER</span>, <span class="api-code-boolean">true</span>);</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-u">curl_setopt</span>(<span class="api-code-php-svar">$</span>ch, <span class="api-code-php-iconst">CURLOPT_SSL_VERIFYHOST</span>, <span class="api-code-numeric">2</span>);</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-u">curl_setopt</span>(<span class="api-code-php-svar">$</span>ch, <span class="api-code-php-iconst">CURLOPT_POST</span>, <span class="api-code-boolean">true</span>);</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-u">curl_setopt</span>(<span class="api-code-php-svar">$</span>ch, <span class="api-code-php-iconst">CURLOPT_POSTFIELDS</span>, <span class="api-code-php-svar">$</span>req);</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-u">curl_setopt</span>(<span class="api-code-php-svar">$</span>ch, <span class="api-code-php-iconst">CURLOPT_HTTPHEADER</span>, <span class="api-code-php-array">array</span>(</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-txt">'Content-Type:application/json'</span>,</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-txt">'X-API-KEY: '</span>  . <span class="api-code-php-const">YOUR_API_KEY</span>,</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-txt">'X-API-SIGN: '</span> . <span class="api-code-php-f">sign</span>(<span class="api-code-php-svar">$</span>req)</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;));</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-svar">$</span>response = <span class="api-code-php-f">curl_exec</span>(<span class="api-code-php-svar">$</span>ch);</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-u">curl_close</span>(<span class="api-code-php-svar">$</span>ch);</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-svar">$</span>result = <span class="api-code-php-f">json_decode</span>(<span class="api-code-php-svar">$</span>response, <span class="api-code-boolean">true</span>);</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-f">if</span> (<span class="api-code-php-svar">$</span>result[<span class="api-code-php-txt">'code'</span>] == 0) {</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-f">return</span> <span class="api-code-php-svar">$</span>result[<span class="api-code-php-txt">'data'</span>];</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;} <span class="api-code-php-f">else</span> {</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-f">throw</span> <span class="api-code-php-new">new</span> <span class="api-code-php-exc">Exception</span>(<span class="api-code-php-svar">$</span>result[<span class="api-code-php-txt">'msg'</span>], <span class="api-code-php-svar">$</span>result[<span class="api-code-php-txt">'code'</span>]);</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;}</pre>
+		    <pre>&nbsp;&nbsp;}</pre>
+		    <pre>&nbsp;&nbsp;</pre>
+		    <pre>&nbsp;&nbsp;<span class="api-code-php-f">request</span>(<span class="api-code-curl-const">METHOD</span>, <span class="api-code-curl-const">DATA</span>);</pre>
+			<pre><span class="api-code-php-p">?&gt;</span></pre>
+		</code>
+	</div>
+</div></div>
+				</section>
+			</section>
+			<!--  -->
+			<section class="api-section" id="api_limits">
+				<section class="api-description-section">
+					<div class="api-description">
+						<h2>Request limits</h2>
+						<p>The request limit per minute is <b>250 weight units</b>.</p>
+<p>The <span class="api-p-req">/api/v2/create</span> request costs <b>50 weight units</b>, all other requests cost <b>1 weight unit</b>.</p>
+<p>If the limit is exceeded, your token will be temporarily blocked. With each subsequent exceeding of the limit after unlocking, the blocking time will increase</p>					</div>
+				</section>
+			</section>
+			<!--  -->
+			<section class="api-section" id="api_libraries">
+				<section class="api-description-section">
+					<div class="api-description">
+						<h2>Official Libraries</h2>
+						<p>You can use ready made libraries to use the FixedFloat API:</p>
+<ul class="with-marker"><li>PHP (<a href="https://ff.io/media/libs/fixedfloat-api.zip">Download</a>)</li>
+<li>Python (<a>Download</a>)</li>
+</ul>					</div>
+				</section>
+			</section>
+			<span id="api_methods"></span>
+			<section class="api-section" id="method_xmlexport" data-parent="api_methods"><section class="api-request-section">
+<div class="api-description">
+<h2>XML export file of rates</h2>
+<div class="api-url sp"><span class="api-url-method get">GET</span><span class="api-url-line"><span class="api-url-protocol">https://</span><span class="api-url-host">ff.io</span><span class="api-url-link">/rates/fixed.xml</span></span></div>
+<div class="api-url"><span class="api-url-method get">GET</span><span class="api-url-line"><span class="api-url-protocol">https://</span><span class="api-url-host">ff.io</span><span class="api-url-link">/rates/float.xml</span></span></div>
+<p>Getting an export file of exchange rates in XML format, containing information about all currency pairs, exchange rates, reserve availability, as well as minimum and maximum amounts for creating an exchange.</p>
+<h3>Parameters</h3>
+<p>No parameters need to be passed for this request. It is also not required to include headers with a key and signature.</p>
+</div>
+<div class="api-example"><div class="api-example-title"><span>Example request</span></div>
+<div class="api-example-tabs">
+	<label class="active" data-lang="curl">Curl</label>
+	<label data-lang="python">Python</label>
+	<label data-lang="php">PHP</label>
+</div>
+<div class="api-example-code-wrapper">
+	<div class="api-example-code active" data-lang="curl">
+		<code>
+			<pre><span class="api-code-curl-f">cURL</span> <span class="api-code-curl-link">"https://ff.io/rates/float.xml"</span> <span class="api-code-curl-h">-L</span></pre>
+		</code>
+	</div>
+	<div class="api-example-code" data-lang="python"></div>
+	<div class="api-example-code" data-lang="php"></div>
+</div></div>
+</section>
+<section class="api-response-section">
+<div class="api-description">
+<h3>Response</h3>
+<p>A successful response contains an array of currency information objects.</p>
+<div class="api-table-wrap"><table class="api-response-table"><thead><tr><td>Field</td><td>Type</td><td>Description</td></tr></thead><tbody><tr data-name="&lt;rates&gt;"><td><i class="table-plus"></i>&lt;rates&gt;</td><td class="api-table-p-type">XML object</td><td>List of currency pair objects</td></tr><tr data-name="&lt;item&gt;" data-parent="&lt;rates&gt;"><td><i class="table-deep-i end"></i><i class="table-plus"></i>&lt;item&gt;</td><td class="api-table-p-type">XML object</td><td>An object containing information about the exchange rate, reserves, minimums and maximums for a pair of currencies.</td></tr><tr data-parent="&lt;rates&gt; &lt;item&gt;"><td><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>&lt;from&gt;</td><td class="api-table-p-type">string</td><td>Currency code of the currency that will be sent for exchange</td></tr><tr data-parent="&lt;rates&gt; &lt;item&gt;"><td><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>&lt;to&gt;</td><td class="api-table-p-type">string</td><td>Currency code of the currency that will be received as a result of the exchange</td></tr><tr data-parent="&lt;rates&gt; &lt;item&gt;"><td><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>&lt;in&gt;</td><td class="api-table-p-type">number</td><td>Amount in the <span class="api-param-ex">&lt;from&gt;</span> currency that will be sent for exchange. Required for calculating the final exchange rate.</td></tr><tr data-parent="&lt;rates&gt; &lt;item&gt;"><td><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>&lt;out&gt;</td><td class="api-table-p-type">number</td><td>Amount in the <span class="api-param-ex">&lt;to&gt;</span> currency that will be received as a result of the exchange. Required for calculating the final exchange rate.</td></tr><tr data-parent="&lt;rates&gt; &lt;item&gt;"><td><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>&lt;amount&gt;</td><td class="api-table-p-type">number</td><td>Indicates the availability of reserves for the <span class="api-param-ex">&lt;to&gt;</span> currency. The parameter does not specify or allow for obtaining the maximum exchange amount.</td></tr><tr data-parent="&lt;rates&gt; &lt;item&gt;"><td><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>&lt;tofee&gt;</td><td class="api-table-p-type">string</td><td>Additional fees (network fees) in the <span class="api-param-ex">&lt;to&gt;</span> currency, which are not included in the exchange rate (in the amount specified in <span class="api-param-ex">&lt;out&gt;</span>).</td></tr><tr data-parent="&lt;rates&gt; &lt;item&gt;"><td><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>&lt;minamount&gt;</td><td class="api-table-p-type">string</td><td>The minimum amount of the <span class="api-param-ex">&lt;from&gt;</span> currency that the service can exchange</td></tr><tr data-parent="&lt;rates&gt; &lt;item&gt;"><td><i class="table-deep-i no"></i><i class="table-deep-i end"></i><i class="table-plus empty"></i>&lt;maxamount&gt;</td><td class="api-table-p-type">string</td><td>The maximum amount of the <span class="api-param-ex">&lt;from&gt;</span> currency that the service can exchange</td></tr></tbody></table></div>
+</div>
+<div class="api-example"><div class="api-example-title"><span>Example XML response</span></div>
+<div class="api-example-code-wrapper">
+	<div class="api-example-code">
+		<code>
+			<pre><span class="api-code-xmltag">&lt;rates&gt;</span></pre>
+<pre>&nbsp;&nbsp;<span class="api-code-xmltag">&lt;item&gt;</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-xmltag">&lt;from&gt;</span><span class="api-code-param">BTC</span><span class="api-code-xmltag">&lt;/from&gt;</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-xmltag">&lt;to&gt;</span><span class="api-code-param">ETH</span><span class="api-code-xmltag">&lt;/to&gt;</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-xmltag">&lt;in&gt;</span><span class="api-code-param">1</span><span class="api-code-xmltag">&lt;/in&gt;</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-xmltag">&lt;out&gt;</span><span class="api-code-param">17.720391807658</span><span class="api-code-xmltag">&lt;/out&gt;</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-xmltag">&lt;amount&gt;</span><span class="api-code-param">191.11148571181</span><span class="api-code-xmltag">&lt;/amount&gt;</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-xmltag">&lt;tofee&gt;</span><span class="api-code-param">0.0004967000 ETH</span><span class="api-code-xmltag">&lt;/tofee&gt;</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-xmltag">&lt;minamount&gt;</span><span class="api-code-param">0.0004896204 BTC</span><span class="api-code-xmltag">&lt;/minamount&gt;</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-xmltag">&lt;maxamount&gt;</span><span class="api-code-param">1.5160672800 BTC</span><span class="api-code-xmltag">&lt;/maxamount&gt;</span></pre>
+<pre>&nbsp;&nbsp;<span class="api-code-xmltag">&lt;/item&gt;</span></pre>
+<pre>&nbsp;&nbsp;<span class="api-code-xmltag">&lt;item&gt;</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-xmltag">&lt;from&gt;</span><span class="api-code-param">BTC</span><span class="api-code-xmltag">&lt;/from&gt;</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-xmltag">&lt;to&gt;</span><span class="api-code-param">USDT</span><span class="api-code-xmltag">&lt;/to&gt;</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-xmltag">&lt;in&gt;</span><span class="api-code-param">1</span><span class="api-code-xmltag">&lt;/in&gt;</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-xmltag">&lt;out&gt;</span><span class="api-code-param">61595.076999999997</span><span class="api-code-xmltag">&lt;/out&gt;</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-xmltag">&lt;amount&gt;</span><span class="api-code-param">1170121.610442</span><span class="api-code-xmltag">&lt;/amount&gt;</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-xmltag">&lt;tofee&gt;</span><span class="api-code-param">2.2490000000 USDT</span><span class="api-code-xmltag">&lt;/tofee&gt;</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-xmltag">&lt;minamount&gt;</span><span class="api-code-param">0.0006675144 BTC</span><span class="api-code-xmltag">&lt;/minamount&gt;</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-xmltag">&lt;maxamount&gt;</span><span class="api-code-param">0.7269365000 BTC</span><span class="api-code-xmltag">&lt;/maxamount&gt;</span></pre>
+<pre>&nbsp;&nbsp;<span class="api-code-xmltag">&lt;/item&gt;</span></pre>
+<pre>&nbsp;&nbsp;<span class="api-code-xmltag">&lt;item&gt;</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-xmltag">&lt;from&gt;</span><span class="api-code-param">ETH</span><span class="api-code-xmltag">&lt;/from&gt;</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-xmltag">&lt;to&gt;</span><span class="api-code-param">USDT</span><span class="api-code-xmltag">&lt;/to&gt;</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-xmltag">&lt;in&gt;</span><span class="api-code-param">1</span><span class="api-code-xmltag">&lt;/in&gt;</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-xmltag">&lt;out&gt;</span><span class="api-code-param">3396.173800000000</span><span class="api-code-xmltag">&lt;/out&gt;</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-xmltag">&lt;amount&gt;</span><span class="api-code-param">1170121.610442</span><span class="api-code-xmltag">&lt;/amount&gt;</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-xmltag">&lt;tofee&gt;</span><span class="api-code-param">2.0380000000 USDT</span><span class="api-code-xmltag">&lt;/tofee&gt;</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-xmltag">&lt;minamount&gt;</span><span class="api-code-param">0.0107817333 ETH</span><span class="api-code-xmltag">&lt;/minamount&gt;</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-xmltag">&lt;maxamount&gt;</span><span class="api-code-param">13.1841012000 ETH</span><span class="api-code-xmltag">&lt;/maxamount&gt;</span></pre>
+<pre>&nbsp;&nbsp;<span class="api-code-xmltag">&lt;/item&gt;</span></pre>
+<pre>&nbsp;&nbsp;<span class="api-code-more">...</span>,</pre>
+<pre><span class="api-code-xmltag">&lt;/rates&gt;</span></pre>
+		</code>
+	</div>
+</div>
+</div>
+</section></section>
+			<section class="api-section" id="method_ccies" data-parent="api_methods"><section class="api-request-section"><div class="api-description">
+<h2>Available currencies</h2>
+<div class="api-url"><span class="api-url-method post">POST</span><span class="api-url-line"><span class="api-url-protocol">https://</span><span class="api-url-host">ff.io</span><span class="api-url-link">/api/v2/ccies</span></span></div>
+<p>Getting a list of currencies supported by the FixedFloat service, as well as data on their display and information about the availability for receiving and sending.</p>
+<h3>Parameters</h3>
+<p>There is no need to pass parameters for this request.</p>
+<p><span class="api-p-header">X-API-SIGN</span> is generated by calling the <span class="api-p-func">HMAC SHA256</span> function from an empty string if no parameters are passed, or from an empty JSON object.</p>
+</div>
+<div class="api-example"><div class="api-example-title"><span>Example request</span></div>
+<div class="api-example-tabs">
+	<label class="active" data-lang="curl">Curl</label>
+	<label data-lang="python">Python</label>
+	<label data-lang="php">PHP</label>
+</div>
+<div class="api-example-code-wrapper">
+	<div class="api-example-code active" data-lang="curl">
+		<code>
+			<pre><span class="api-code-curl-f">cURL</span> <span class="api-code-curl-h">-X</span> <span class="api-code-curl-x">POST</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"Accept: application/json"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"X-API-KEY: <span class="api-code-curl-const">YOUR_API_KEY</span>"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"X-API-SIGN: <span class="api-code-curl-const">GENERATED_SIGN</span>"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"Content-Type: application/json; charset=UTF-8"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-link">"https://ff.io/api/v2/ccies"</span> <span class="api-code-curl-h">-L</span></pre>
+		</code>
+	</div>
+	<div class="api-example-code" data-lang="python"></div>
+	<div class="api-example-code" data-lang="php">
+		<code>
+			<pre><span class="api-code-php-p">&lt;?php</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-php-u">require_once</span>(<span class="api-code-php-txt">'fixedfloat.php'</span>);</pre>
+			<pre>&nbsp;&nbsp;</pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-php-svar">$</span>ff = <span class="api-code-php-new">new</span> <span class="api-code-php-f">FixedFloatApi</span>(<span class="api-code-php-const">YOUR_API_KEY</span>, <span class="api-code-php-const">YOUR_API_SECRET</span>);</pre>
+			<pre>&nbsp;&nbsp;</pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-php-f">return</span> <span class="api-code-php-svar">$</span>ff-&gt;<span class="api-code-php-u">ccies</span>();</pre>
+			<pre><span class="api-code-php-p">?&gt;</span></pre>
+		</code>
+	</div>
+</div></div>
+</section><section class="api-response-section"><div class="api-description">
+<h3>Response</h3>
+<p>A successful response contains an array of currency information objects.</p>
+<div class="api-table-wrap"><table class="api-response-table"><thead><tr><td>Field</td><td>Type</td><td>Description</td></tr></thead><tbody><tr><td><i class="table-plus empty"></i>code</td><td class="api-table-p-type">number</td><td>Response status code. If the request is successful, then the status code is "0", otherwise it is an error</td></tr><tr><td><i class="table-plus empty"></i>msg</td><td class="api-table-p-type">string</td><td>Status message</td></tr><tr data-name="data"><td><i class="table-plus"></i>data</td><td class="api-table-p-type">Array</td><td>List of currencies supported by FixedFloat</td></tr><tr data-parent="data"><td><i class="table-deep-i"></i><i class="table-plus empty"></i>data[].code</td><td class="api-table-p-type">string</td><td>Unique currency code in FixedFloat</td></tr><tr data-parent="data"><td><i class="table-deep-i"></i><i class="table-plus empty"></i>data[].coin</td><td class="api-table-p-type">string</td><td>Common asset ticker</td></tr><tr data-parent="data"><td><i class="table-deep-i"></i><i class="table-plus empty"></i>data[].network</td><td class="api-table-p-type">string</td><td>Blockchain network in which this asset is represented</td></tr><tr data-parent="data"><td><i class="table-deep-i"></i><i class="table-plus empty"></i>data[].name</td><td class="api-table-p-type">string</td><td>Name of currency</td></tr><tr data-parent="data"><td><i class="table-deep-i"></i><i class="table-plus empty"></i>data[].recv</td><td class="api-table-p-type">boolean</td><td>Availability of currency for acceptance into the service from the client</td></tr><tr data-parent="data"><td><i class="table-deep-i"></i><i class="table-plus empty"></i>data[].send</td><td class="api-table-p-type">boolean</td><td>Availability of currency to send to the client</td></tr><tr data-parent="data"><td><i class="table-deep-i"></i><i class="table-plus empty"></i>data[].tag</td><td class="api-table-p-type">string</td><td>The name of the additional field, if available; otherwise null</td></tr><tr data-parent="data"><td><i class="table-deep-i"></i><i class="table-plus empty"></i>data[].logo</td><td class="api-table-p-type">string</td><td>Link to currency image</td></tr><tr data-parent="data"><td><i class="table-deep-i"></i><i class="table-plus empty"></i>data[].color</td><td class="api-table-p-type">string</td><td>Currency color specified in HEX format</td></tr><tr data-parent="data"><td><i class="table-deep-i end"></i><i class="table-plus empty"></i>data[].priority</td><td class="api-table-p-type">number</td><td>Priority in the list of currencies of the service</td></tr></tbody></table></div>
+</div>
+<div class="api-example"><div class="api-example-title"><span>Example JSON response</span></div>
+<div class="api-example-code-wrapper">
+	<div class="api-example-code">
+		<code>
+			<pre><span class="api-code-punctuation">{</span></pre><pre>&nbsp;&nbsp;<span class="api-code-param">"code"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">0</span>,</pre>
+<pre>&nbsp;&nbsp;<span class="api-code-param">"msg"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">""</span>,</pre>
+<pre>&nbsp;&nbsp;<span class="api-code-param">"data"</span><span class="api-code-punctuation">:</span> <span class="api-code-punctuation">[</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-punctuation">{</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"code"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"BTC"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"coin"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"BTC"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"network"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"BTC"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"name"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"Bitcoin"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"recv"</span><span class="api-code-punctuation">:</span> <span class="api-code-boolean">true</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"send"</span><span class="api-code-punctuation">:</span> <span class="api-code-boolean">true</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"tag"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"logo"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"https://fixedfloat.com/assets/images/coins/svg/btc.svg"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"color"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"#f7931a"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"priority"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"5"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-punctuation">}</span><span class="api-code-punctuation">,</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-more">...</span>,</pre>
+<pre>&nbsp;&nbsp;<span class="api-code-punctuation">]</span><span class="api-code-punctuation">,</span></pre>
+<pre><span class="api-code-punctuation">}</span></pre>		</code>
+	</div>
+</div></div>
+</section></section>
+			<section class="api-section" id="method_price" data-parent="api_methods"><section class="api-request-section">
+<div class="api-description">
+<h2>Exchange rate</h2>
+<div class="api-url"><span class="api-url-method post">POST</span><span class="api-url-line"><span class="api-url-protocol">https://</span><span class="api-url-host">ff.io</span><span class="api-url-link">/api/v2/price</span></span></div>
+<p>Getting the exchange rate of a pair of currencies in the selected direction and type of rate.</p>
+<p><span class="api-p-alert">ATTENTION!</span> To get the exchange rates of all available currencies, you should use <a href="https://ff.io/api#method_xmlexport">the XML export file of rates</a></p>
+<p>For this method, as well as for method <a class="api-p-req" href="https://ff.io/api#method_create">/api/v2/create</a>, it is possible to increase accrued earnings under the affiliate program using parameter <span class="api-p-param">afftax</span>.</p>
+<p>The final exchange rate when passing parameters <span class="api-p-param">afftax</span> and <span class="api-p-param">refcode</span> depends on whether your affiliate program code has been approved for earning for orders generated by the API and the base percentage (<span class="api-p-var">AFFBASE</span>) set for your code, and will be calculated according to the formula:</p>
+<code class="api-func">
+<div class="api-func-line">total = <span class="api-mono"><span class="api-p-var">FF</span> - <span class="api-p-var">AFFB</span> + <span class="api-p-param">afftax</span></span><span class="api-where">, if afftax &lt; FF - AFFB</span></div>
+<div class="api-func-line">total = <span class="api-mono"><span class="api-p-param">afftax</span> x 2</span><span class="api-where">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, if FF - AFFB &lt; afftax &lt; FF</span></div>
+<div class="api-func-line">total = <span class="api-mono"><span class="api-p-var">FF</span> + <span class="api-p-param">afftax</span></span><span class="api-where">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, if afftax &gt; FF</span></div>
+
+
+</code>
+<p>where <span class="api-p-var">FF</span> is the base percentage of the service for the selected type of exchange rate (1% for a fixed rate and 0.5% for a floating rate);<br><span class="api-p-var">AFFB</span> is the base percentage of the service profit set for your affiliate program code, for the selected type of exchange rate (<span class="api-p-var">AFFBASE</span> for a fixed rate and <span class="api-p-var">AFFBASE</span>÷2 for a floating rate)</p>
+<p>For clarity, we suggest that you familiarize yourself with the table below with <span class="api-p-var">AFFBASE</span>=0.4, where <span class="api-p-var">FFP</span> = <span class="api-p-var">FF</span> - <span class="api-p-var">AFFB</span>:</p>
+<table class="api-cnt-table">
+<thead>
+<tr>
+<td colspan="3" class="center">FIXED RATE</td>
+<td colspan="3" class="center border-l">FLOAT RATE</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>FFP</td>
+<td>afftax</td>
+<td class="border-l">Total</td>
+<td>FFP</td>
+<td>afftax</td>
+</tr>
+</thead>
+<tbody>
+<tr class="api-cnt-table-d0">
+<td>1.0</td>
+<td>0.6</td>
+<td>0.4</td>
+<td class="border-l">0.5</td>
+<td>0.3</td>
+<td>0.2</td>
+</tr>
+<tr class="api-cnt-table-d0">
+<td>1.1</td>
+<td>0.6</td>
+<td>0.5</td>
+<td class="border-l">0.55</td>
+<td>0.3</td>
+<td>0.25</td>
+</tr>
+<tr class="api-cnt-table-d0">
+<td>1.2</td>
+<td>0.6</td>
+<td>0.6</td>
+<td class="border-l">0.6</td>
+<td>0.3</td>
+<td>0.3</td>
+</tr>
+<tr class="api-cnt-table-d1">
+<td>1.4</td>
+<td>0.7</td>
+<td>0.7</td>
+<td class="border-l">0.7</td>
+<td>0.35</td>
+<td>0.35</td>
+</tr>
+<tr class="api-cnt-table-d1">
+<td>1.6</td>
+<td>0.8</td>
+<td>0.8</td>
+<td class="border-l">0.8</td>
+<td>0.4</td>
+<td>0.4</td>
+</tr>
+<tr class="api-cnt-table-d1">
+<td>1.8</td>
+<td>0.9</td>
+<td>0.9</td>
+<td class="border-l">0.9</td>
+<td>0.45</td>
+<td>0.45</td>
+</tr>
+<tr class="api-cnt-table-d2">
+<td>2.0</td>
+<td>1.0</td>
+<td>1.0</td>
+<td class="border-l">1.0</td>
+<td>0.5</td>
+<td>0.5</td>
+</tr>
+<tr class="api-cnt-table-d2">
+<td>2.1</td>
+<td>1.0</td>
+<td>1.1</td>
+<td class="border-l">1.05</td>
+<td>0.5</td>
+<td>0.55</td>
+</tr>
+<tr class="api-cnt-table-d2">
+<td>2.2</td>
+<td>1.0</td>
+<td>1.2</td>
+<td class="border-l">1.1</td>
+<td>0.5</td>
+<td>0.6</td>
+</tr>
+</tbody>
+</table>
+<p>If your affiliate code did not have a base API earnings percentage set, then the final exchange rate will be calculated as:</p>
+<code class="api-func">
+<div class="api-func-line"><span class="api-mono"><span class="api-p-var">FF</span> + <span class="api-p-param">afftax</span></span></div>
+
+
+
+
+
+
+
+
+		</code>
+<p>where <span class="api-p-var">FF</span> is the base percentage of the service for the selected type of exchange rate (1% for a fixed rate and 0.5% for a floating rate).</p>
+<p>Earnings will be credited to your account if the affiliate program code was passed in the <span class="api-p-param">refcode</span> parameter and this code belongs to your account. Otherwise, the <span class="api-p-param">afftax</span> and <span class="api-p-param">refcode</span> parameters will be ignored.</p>
+<h3>Parameters</h3>
+<div class="api-table-wrap"><table class="api-request-table">
+	<thead>
+		<tr><td>Name</td><td>Required</td><td>Type</td><td>Description</td></tr>
+	</thead>
+	<tbody>
+		<tr><td>type</td><td><span class="api-table-p-req">true</span></td><td class="api-table-p-type">string</td><td>Order type</td></tr>
+		<tr><td>fromCcy</td><td><span class="api-table-p-req">true</span></td><td class="api-table-p-type">string</td><td>Code of the currency the client wants to send</td></tr>
+		<tr><td>toCcy</td><td><span class="api-table-p-req">true</span></td><td class="api-table-p-type">string</td><td>Code of the currency the client wants to receive</td></tr>
+		<tr><td>direction</td><td><span class="api-table-p-req">true</span></td><td class="api-table-p-type">string</td><td>
+			The direction of the exchange determines whether the client wants to send a certain amount or receive a certain amount. Can take one of the following values:
+			<br>● <span class="api-param-ex">from</span> — if the client wants to send the amount <i>amount</i> in the currency <i>fromCcy</i>
+			<br>● <span class="api-param-ex">to</span> — if the client wants to receive the amount <i>amount</i> in the currency <i>toCcy</i>
+		</td></tr>
+		<tr><td>amount</td><td><span class="api-table-p-req">true</span></td><td class="api-table-p-type">numeric</td><td>If <i>direction</i>="from", then this is the amount in currency <i>fromCcy</i> that the client wants to send.<br>If <i>direction</i>="to", then this is the amount in currency <i>toCcy</i> that the client wants to receive</td></tr>
+		<tr><td>ccies</td><td><span class="api-table-p-req not">false</span></td><td class="api-table-p-type">boolean</td><td>Adding a list of currencies to the response with information about the availability for sending and receiving</td></tr>
+		<tr><td>usd</td><td><span class="api-table-p-req not">false</span></td><td class="api-table-p-type">boolean</td><td>Amount in USD, by which <i>fromAmount</i> or <i>toAmount</i> will be changed in case the limits are exceeded</td></tr>
+		<tr><td>refcode</td><td><span class="api-table-p-req not">false</span></td><td class="api-table-p-type">string</td><td>Affiliate program code for which earnings will be accrued under the affiliate program. If the <i>afftax</i> parameter is not set and this affiliate program code does not participate in earning via the API, passing this parameter will not affect anything. It is possible to transfer only affiliate program codes that were received in the same account in which the API key used for this request was received</td></tr>
+		<tr><td>afftax</td><td><span class="api-table-p-req not">false</span></td><td class="api-table-p-type">float</td><td>Desired earnings under the affiliate program as a percentage of the exchange amount. Affects the final exchange rate and earnings under the affiliate program if the <i>refcode</i> parameter is also set.</td></tr>
+	</tbody>
+</table></div>
+</div>
+<div class="api-example"><div class="api-example-title"><span>Example request</span></div>
+<div class="api-example-tabs">
+	<label class="active" data-lang="curl">Curl</label>
+	<label data-lang="python">Python</label>
+	<label data-lang="php">PHP</label>
+</div>
+<div class="api-example-code-wrapper">
+	<div class="api-example-code active" data-lang="curl">
+		<code>
+			<pre><span class="api-code-curl-f">cURL</span> <span class="api-code-curl-h">-X</span> <span class="api-code-curl-x">POST</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"Accept: application/json"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"X-API-KEY: <span class="api-code-curl-const">YOUR_API_KEY</span>"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"X-API-SIGN: <span class="api-code-curl-const">GENERATED_SIGN</span>"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"Content-Type: application/json; charset=UTF-8"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-d</span> <span class="api-code-curl-txt">'{"fromCcy":"BTC","toCcy":"USDTTRC","amount":0.5,direction":"from","type":"float"}'</span></pre>  
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-link">"https://ff.io/api/v2/price"</span> <span class="api-code-curl-h">-L</span></pre>
+		</code>
+	</div>
+	<div class="api-example-code" data-lang="python"></div>
+	<div class="api-example-code" data-lang="php">
+		<code>
+			<pre><span class="api-code-php-p">&lt;?php</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-php-u">require_once</span>(<span class="api-code-php-txt">'fixedfloat.php'</span>);</pre>
+			<pre>&nbsp;&nbsp;</pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-php-svar">$</span>ff = <span class="api-code-php-new">new</span> <span class="api-code-php-f">FixedFloatApi</span>(<span class="api-code-php-const">YOUR_API_KEY</span>, <span class="api-code-php-const">YOUR_API_SECRET</span>);</pre>
+			<pre>&nbsp;&nbsp;</pre>
+		    <pre>&nbsp;&nbsp;<span class="api-code-php-svar">$</span>data = <span class="api-code-php-array">array</span>(</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-txt">'fromCcy'</span>    =&gt; <span class="api-code-php-txt">'BTC'</span>,</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-txt">'toCcy'</span>      =&gt; <span class="api-code-php-txt">'USDTTRC'</span>,</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-txt">'amount'</span>     =&gt; <span class="api-code-php-txt">'0.5'</span>,</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-txt">'direction'</span>  =&gt; <span class="api-code-php-txt">'from'</span>,</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-txt">'type'</span>       =&gt; <span class="api-code-php-txt">'float'</span>,</pre>
+		    <pre>&nbsp;&nbsp;);</pre>
+			<pre>&nbsp;&nbsp;</pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-php-f">return</span> <span class="api-code-php-svar">$</span>ff-&gt;<span class="api-code-php-u">price</span>(<span class="api-code-php-svar">$</span>data);</pre>
+			<pre><span class="api-code-php-p">?&gt;</span></pre>
+		</code>
+	</div>
+</div></div>
+</section>
+<section class="api-response-section">
+<div class="api-description">
+<h3>Response</h3>
+<p>A successful response contains information about the currencies of the selected pair, the exchange rate, and the amount sent and received.</p>
+<div class="api-table-wrap"><table class="api-response-table"><thead><tr><td>Field</td><td>Type</td><td>Description</td></tr></thead><tbody><tr><td><i class="table-plus empty"></i>code</td><td class="api-table-p-type">number</td><td>Response status code. If the request is successful, then the status code is "0", otherwise it is an error</td></tr><tr><td><i class="table-plus empty"></i>msg</td><td class="api-table-p-type">string</td><td>Status message</td></tr><tr data-name="data"><td><i class="table-plus"></i>data</td><td class="api-table-p-type">Object</td><td>An object with information about the currencies of the selected pair, the exchange rate, and the amount sent and received</td></tr><tr data-name="data.from" data-parent="data"><td><i class="table-deep-i"></i><i class="table-plus"></i>data.from</td><td class="api-table-p-type">Object</td><td>Data about the asset that the client must send</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.code</td><td class="api-table-p-type">string</td><td>Unique currency code in FixedFloat</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.network</td><td class="api-table-p-type">string</td><td>Blockchain network in which this asset is represented</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.coin</td><td class="api-table-p-type">string</td><td>Common asset ticker</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.amount</td><td class="api-table-p-type">number</td><td>Amount that the client needs to send</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.rate</td><td class="api-table-p-type">number</td><td>Final exchange rate</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.precision</td><td class="api-table-p-type">number</td><td>Rounding accuracy</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.min</td><td class="api-table-p-type">number</td><td>Minimum amount</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.max</td><td class="api-table-p-type">number</td><td>Maximum amount</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.usd</td><td class="api-table-p-type">number</td><td>Equivalent in USD</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i end"></i><i class="table-plus empty"></i>data.from.btc</td><td class="api-table-p-type">number</td><td>Equivalent in BTC</td></tr><tr data-name="data.to" data-parent="data"><td><i class="table-deep-i"></i><i class="table-plus"></i>data.to</td><td class="api-table-p-type">Object</td><td>Data about the asset that the client will receive</td></tr><tr data-parent="data data.to"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.code</td><td class="api-table-p-type">string</td><td>Unique currency code in FixedFloat</td></tr><tr data-parent="data data.to"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.network</td><td class="api-table-p-type">string</td><td>Blockchain network in which this asset is represented</td></tr><tr data-parent="data data.to"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.coin</td><td class="api-table-p-type">string</td><td>Common asset ticker</td></tr><tr data-parent="data data.to"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.amount</td><td class="api-table-p-type">number</td><td>Amount that the client must to receive</td></tr><tr data-parent="data data.to"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.rate</td><td class="api-table-p-type">number</td><td>Final exchange rate</td></tr><tr data-parent="data data.to"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.precision</td><td class="api-table-p-type">number</td><td>Rounding accuracy</td></tr><tr data-parent="data data.to"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.min</td><td class="api-table-p-type">number</td><td>Minimum amount</td></tr><tr data-parent="data data.to"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.max</td><td class="api-table-p-type">number</td><td>Maximum amount</td></tr><tr data-parent="data data.to"><td><i class="table-deep-i nd"></i><i class="table-deep-i end"></i><i class="table-plus empty"></i>data.to.usd</td><td class="api-table-p-type">number</td><td>Equivalent in USD</td></tr><tr data-parent="data"><td><i class="table-deep-i"></i><i class="table-plus empty"></i>data.errors</td><td class="api-table-p-type">Array</td><td>An array of a list of errors. If the array is empty, then creating an order with these parameters is possible.
+					<br>The array may contain the following errors:
+					<br>● <span class="api-param-ex">MAINTENANCE_FROM</span> — Currency from <i>data.from</i> object under maintenance
+					<br>● <span class="api-param-ex">MAINTENANCE_TO</span> — Currency from object <i>data.to</i> under maintenance
+					<br>● <span class="api-param-ex">OFFLINE_FROM</span> — Currency from object <i>data.from</i> is not available
+					<br>● <span class="api-param-ex">OFFLINE_TO</span> — Currency from object <i>data.to</i> is not available
+					<br>● <span class="api-param-ex">RESERVE_FROM</span> — Not enough currency reserves from object <i>data.from</i>
+					<br>● <span class="api-param-ex">RESERVE_TO</span> — Not enough currency reserves from object <i>data.to</i>
+					<br>● <span class="api-param-ex">LIMIT_MIN</span> — Amount less than limit
+					<br>● <span class="api-param-ex">LIMIT_MAX</span> — The amount is greater than the limit</td></tr><tr data-name="data.ccies" data-parent="data"><td><i class="table-deep-i end"></i><i class="table-plus"></i>data.ccies</td><td class="api-table-p-type">Array</td><td>Added if the <i>ccies</i> parameter is <i>true</i>. An array containing a list of objects with information about the availability for sending and receiving currencies</td></tr><tr data-parent="data data.ccies"><td><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.ccies[].code</td><td class="api-table-p-type">string</td><td>Unique currency code in FixedFloat</td></tr><tr data-parent="data data.ccies"><td><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.ccies[].recv</td><td class="api-table-p-type">boolean</td><td>Availability of currency for acceptance into the service from the client</td></tr><tr data-parent="data data.ccies"><td><i class="table-deep-i no"></i><i class="table-deep-i end"></i><i class="table-plus empty"></i>data.ccies[].send</td><td class="api-table-p-type">boolean</td><td>Availability of currency to send to the client</td></tr></tbody></table></div>
+</div>
+<div class="api-example"><div class="api-example-title"><span>Example JSON response</span></div>
+<div class="api-example-code-wrapper">
+	<div class="api-example-code">
+		<code>
+			<pre><span class="api-code-punctuation">{</span></pre><pre>&nbsp;&nbsp;<span class="api-code-param">"code"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">0</span>,</pre>
+<pre>&nbsp;&nbsp;<span class="api-code-param">"msg"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">""</span>,</pre>
+<pre>&nbsp;&nbsp;<span class="api-code-param">"data"</span><span class="api-code-punctuation">:</span> <span class="api-code-punctuation">{</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"from"</span><span class="api-code-punctuation">:</span> <span class="api-code-punctuation">{</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"code"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"BSC"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"network"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"BSC"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"coin"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"BNB"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"amount"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">0.040297</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"rate"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">0.01452202</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"precision"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">8</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"min"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">0.005053</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"max"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">967.072057</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"usd"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">12.28</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"btc"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">0.00058813</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-punctuation">}</span><span class="api-code-punctuation">,</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"to"</span><span class="api-code-punctuation">:</span> <span class="api-code-punctuation">{</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"code"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"BTC"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"network"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"BTC"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"coin"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"BTC"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"amount"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">0.00055984</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"rate"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">68.164781</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"precision"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">8</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"min"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">0.000479</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"max"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">14.04381911</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"usd"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">11.69</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-punctuation">}</span><span class="api-code-punctuation">,</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"errors"</span><span class="api-code-punctuation">:</span> <span class="api-code-punctuation">[</span><span class="api-code-punctuation">]</span><span class="api-code-punctuation">,</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"ccies"</span><span class="api-code-punctuation">:</span> <span class="api-code-punctuation">[</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-punctuation">{</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"code"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"ADA"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"recv"</span><span class="api-code-punctuation">:</span> <span class="api-code-boolean">true</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"send"</span><span class="api-code-punctuation">:</span> <span class="api-code-boolean">true</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-punctuation">}</span><span class="api-code-punctuation">,</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-more">...</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-punctuation">]</span><span class="api-code-punctuation">,</span></pre>
+<pre>&nbsp;&nbsp;<span class="api-code-punctuation">}</span><span class="api-code-punctuation">,</span></pre>
+<pre><span class="api-code-punctuation">}</span></pre>		</code>
+	</div>
+</div></div>
+</section></section> 
+			<section class="api-section" id="method_create" data-parent="api_methods"><section class="api-request-section"><div class="api-description">
+<h2>Create order</h2>
+<div class="api-url"><span class="api-url-method post">POST</span><span class="api-url-line"><span class="api-url-protocol">https://</span><span class="api-url-host">ff.io</span><span class="api-url-link">/api/v2/create</span></span></div>
+<p>Creating an order for the exchange of selected currencies with a specified amount and address.</p>
+<p>For this method, as well as for the <a class="api-p-req" href="https://ff.io/api#method_price">/api/v2/price</a> method, it is possible to increase accrued earnings under the affiliate program using the parameter <span class="api-p-param">afftax</span>. The rules for using this parameter are described in method <a class="api-p-req" href="https://ff.io/api#method_price">/api/v2/price</a></p>
+<h3>Parameters</h3>
+<div class="api-table-wrap"><table class="api-request-table">
+	<thead>
+		<tr><td>Name</td><td>Required</td><td>Type</td><td>Description</td></tr>
+	</thead>
+	<tbody>
+		<tr><td>type</td><td><span class="api-table-p-req">true</span></td><td class="api-table-p-type">string</td><td>Order type</td></tr>
+		<tr><td>fromCcy</td><td><span class="api-table-p-req">true</span></td><td class="api-table-p-type">string</td><td>Code of the currency the client wants to send</td></tr>
+		<tr><td>toCcy</td><td><span class="api-table-p-req">true</span></td><td class="api-table-p-type">string</td><td>Code of the currency the client wants to receive</td></tr>
+		<tr><td>direction</td><td><span class="api-table-p-req">true</span></td><td class="api-table-p-type">string</td><td>
+			The direction of the exchange determines whether the client wants to send a certain amount or receive a certain amount. Can take one of the following values:
+			<br>● <span class="api-param-ex">from</span> — if the client wants to send the amount <i>amount</i> in the currency <i>fromCcy</i>
+			<br>● <span class="api-param-ex">to</span> — if the client wants to receive the amount <i>amount</i> in the currency <i>toCcy</i>
+		</td></tr>
+		<tr><td>amount</td><td><span class="api-table-p-req">true</span></td><td class="api-table-p-type">numeric</td><td>If <i>direction</i>="from", then this is the amount in currency <i>fromCcy</i> that the client wants to send.<br>If <i>direction</i>="to", then this is the amount in currency <i>toCcy</i> that the client wants to receive</td></tr>
+		<tr><td>toAddress</td><td><span class="api-table-p-req">true</span></td><td class="api-table-p-type">string</td><td>Destination address to which the funds will be dispatched upon the successful completion of the Order</td></tr>
+		<tr><td>tag</td><td><span class="api-table-p-req not">false</span></td><td class="api-table-p-type">boolean</td><td>If you need to specify a Memo or Destination Tag when sending, you should specify it here. This parameter can be omitted by specifying the MEMO or Destination Tag in toAddress separated by a colon.</td></tr>
+		<tr><td>refcode</td><td><span class="api-table-p-req not">false</span></td><td class="api-table-p-type">string</td><td>Affiliate program code for which earnings will be accrued under the affiliate program. If the <i>afftax</i> parameter is not set and this affiliate program code does not participate in earning via the API, passing this parameter will not affect anything. It is possible to transfer only affiliate program codes that were received in the same account in which the API key used for this request was received</td></tr>
+		<tr><td>afftax</td><td><span class="api-table-p-req not">false</span></td><td class="api-table-p-type">float</td><td>Desired earnings under the affiliate program as a percentage of the exchange amount. Affects the final exchange rate and earnings under the affiliate program if the <i>refcode</i> parameter is also set.</td></tr>
+	</tbody>
+</table></div>
+</div>
+<div class="api-example"><div class="api-example-title"><span>Example request</span></div>
+<div class="api-example-tabs">
+	<label class="active" data-lang="curl">Curl</label>
+	<label data-lang="python">Python</label>
+	<label data-lang="php">PHP</label>
+</div>
+<div class="api-example-code-wrapper">
+	<div class="api-example-code active" data-lang="curl">
+		<code>
+			<pre><span class="api-code-curl-f">cURL</span> <span class="api-code-curl-h">-X</span> <span class="api-code-curl-x">POST</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"Accept: application/json"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"X-API-KEY: <span class="api-code-curl-const">YOUR_API_KEY</span>"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"X-API-SIGN: <span class="api-code-curl-const">GENERATED_SIGN</span>"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"Content-Type: application/json; charset=UTF-8"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-d</span> <span class="api-code-curl-txt">'{"fromCcy":"BTC","toCcy":"USDTTRC","amount":0.5,direction":"from","type":"float","toAddress":"TAzsQ9Gx8eqFNFSKbeXrbi45CuVPHzA8wr"}'</span></pre>  
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-link">"https://ff.io/api/v2/create"</span> <span class="api-code-curl-h">-L</span></pre>
+		</code>
+	</div>
+	<div class="api-example-code" data-lang="python"></div>
+	<div class="api-example-code" data-lang="php">
+		<code>
+			<pre><span class="api-code-php-p">&lt;?php</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-php-u">require_once</span>(<span class="api-code-php-txt">'fixedfloat.php'</span>);</pre>
+			<pre>&nbsp;&nbsp;</pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-php-svar">$</span>ff = <span class="api-code-php-new">new</span> <span class="api-code-php-f">FixedFloatApi</span>(<span class="api-code-php-const">YOUR_API_KEY</span>, <span class="api-code-php-const">YOUR_API_SECRET</span>);</pre>
+			<pre>&nbsp;&nbsp;</pre>
+		    <pre>&nbsp;&nbsp;<span class="api-code-php-svar">$</span>data = <span class="api-code-php-array">array</span>(</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-txt">'fromCcy'</span>    =&gt; <span class="api-code-php-txt">'BTC'</span>,</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-txt">'toCcy'</span>      =&gt; <span class="api-code-php-txt">'USDTTRC'</span>,</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-txt">'amount'</span>     =&gt; <span class="api-code-php-txt">'0.5'</span>,</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-txt">'direction'</span>  =&gt; <span class="api-code-php-txt">'from'</span>,</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-txt">'type'</span>       =&gt; <span class="api-code-php-txt">'float'</span>,</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-txt">'toAddress'</span>  =&gt; <span class="api-code-php-txt">'TAzsQ9Gx8eqFNFSKbeXrbi45CuVPHzA8wr'</span></pre>
+		    <pre>&nbsp;&nbsp;);</pre>
+			<pre>&nbsp;&nbsp;</pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-php-f">return</span> <span class="api-code-php-svar">$</span>ff-&gt;<span class="api-code-php-u">create</span>(<span class="api-code-php-svar">$</span>data);</pre>
+			<pre><span class="api-code-php-p">?&gt;</span></pre>
+		</code>
+	</div>
+</div></div>
+</section><section class="api-response-section"><div class="api-description">
+<h3>Response</h3>
+<p>A successful response contains an object with information about all the data of the created order, including the <span class="api-p-param">token</span> parameter, for later obtaining updated information about the order using the <a class="api-p-req" href="https://ff.io/api#method_price">/api/v2/</a> method order, and order management.</p>
+<div class="api-table-wrap"><table class="api-response-table"><thead><tr><td>Field</td><td>Type</td><td>Description</td></tr></thead><tbody><tr><td><i class="table-plus empty"></i>code</td><td class="api-table-p-type">number</td><td>Response status code. If the request is successful, then the status code is "0", otherwise it is an error</td></tr><tr><td><i class="table-plus empty"></i>msg</td><td class="api-table-p-type">string</td><td>Status message</td></tr><tr data-name="data"><td><i class="table-plus"></i>data</td><td class="api-table-p-type">Object</td><td>Object with information about all the data of the created order</td></tr><tr data-parent="data"><td><i class="table-deep-i"></i><i class="table-plus empty"></i>data.token</td><td class="api-table-p-type">string</td><td>Order access token</td></tr><tr data-parent="data"><td><i class="table-deep-i"></i><i class="table-plus empty"></i>data.id</td><td class="api-table-p-type">string</td><td>Order ID. Consists of 6 characters</td></tr><tr data-parent="data"><td><i class="table-deep-i"></i><i class="table-plus empty"></i>data.type</td><td class="api-table-p-type">string</td><td>Order type. Can be one of the values:
+											<br>● <span class="api-param-ex">fixed</span> — fixed rate order
+											<br>● <span class="api-param-ex">float</span> — floating rate order</td></tr><tr data-parent="data"><td><i class="table-deep-i"></i><i class="table-plus empty"></i>data.email</td><td class="api-table-p-type">string</td><td>Email address for the order to receive notifications about changes in the order</td></tr><tr data-parent="data"><td><i class="table-deep-i"></i><i class="table-plus empty"></i>data.status</td><td class="api-table-p-type">string</td><td>Order status. Can be one of the values:
+					<br>● <span class="api-param-ex">NEW</span> — New order
+					<br>● <span class="api-param-ex">PENDING</span> — Transaction received, pending confirmation
+					<br>● <span class="api-param-ex">EXCHANGE</span> — Transaction confirmed, exchange in progress
+					<br>● <span class="api-param-ex">WITHDRAW</span> — Sending funds
+					<br>● <span class="api-param-ex">DONE</span> — Order completed
+					<br>● <span class="api-param-ex">EXPIRED</span> — Order expired
+					<br>● <span class="api-param-ex">EMERGENCY</span> — Emergency, customer choice required</td></tr><tr data-name="data.time" data-parent="data"><td><i class="table-deep-i"></i><i class="table-plus"></i>data.time</td><td class="api-table-p-type">Object</td><td>Object containing timestamp data</td></tr><tr data-parent="data data.time"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.time.reg</td><td class="api-table-p-type">number</td><td>Order creation timestamp</td></tr><tr data-parent="data data.time"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.time.start</td><td class="api-table-p-type">number</td><td>Transaction receive timestamp</td></tr><tr data-parent="data data.time"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.time.finish</td><td class="api-table-p-type">number</td><td>Timestamp when the order was completed</td></tr><tr data-parent="data data.time"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.time.update</td><td class="api-table-p-type">number</td><td>Timestamp of last order update</td></tr><tr data-parent="data data.time"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.time.expiration</td><td class="api-table-p-type">number</td><td>Timestamp when order expires</td></tr><tr data-parent="data data.time"><td><i class="table-deep-i nd"></i><i class="table-deep-i end"></i><i class="table-plus empty"></i>data.time.left</td><td class="api-table-p-type">number</td><td>The number of seconds before the end of the order</td></tr><tr data-name="data.from" data-parent="data"><td><i class="table-deep-i"></i><i class="table-plus"></i>data.from</td><td class="api-table-p-type">Object</td><td>An object containing information about the currency sent by clients and transactions</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.code</td><td class="api-table-p-type">string</td><td>Currency code</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.coin</td><td class="api-table-p-type">string</td><td>Common asset ticker</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.network</td><td class="api-table-p-type">string</td><td>Blockchain network in which this asset is represented</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.name</td><td class="api-table-p-type">string</td><td>Name of currency</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.alias</td><td class="api-table-p-type">string</td><td>Alias for creating qr code</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.amount</td><td class="api-table-p-type">string</td><td>Amount that the client needs to send</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.address</td><td class="api-table-p-type">string</td><td>The destination address to which the user is ought to deposit his funds in order for the trade to execute</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.tag</td><td class="api-table-p-type">string</td><td>MEMO or Destination Tag if required</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.addressMix</td><td class="api-table-p-type">string</td><td>Address with a colon-connected tag</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.reqConfirmations</td><td class="api-table-p-type">number</td><td>Required number of transaction confirmations</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.maxConfirmations</td><td class="api-table-p-type">number</td><td>The maximum number of transaction confirmations that system updates</td></tr><tr data-name="data.from.tx" data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i end"></i><i class="table-plus"></i>data.from.tx</td><td class="api-table-p-type">Object</td><td>An object containing data about the received transaction</td></tr><tr data-parent="data data.from data.from.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.tx.id</td><td class="api-table-p-type">string</td><td>Transaction hash</td></tr><tr data-parent="data data.from data.from.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.tx.amount</td><td class="api-table-p-type">string</td><td>Transaction amount</td></tr><tr data-parent="data data.from data.from.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.tx.fee</td><td class="api-table-p-type">string</td><td>Miner fee</td></tr><tr data-parent="data data.from data.from.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.tx.ccyfee</td><td class="api-table-p-type">string</td><td>Currency of Miner fee</td></tr><tr data-parent="data data.from data.from.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.tx.timeReg</td><td class="api-table-p-type">number</td><td>Transaction registration timestamp</td></tr><tr data-parent="data data.from data.from.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.tx.timeBlock</td><td class="api-table-p-type">number</td><td>Timestamp for adding a transaction to a block</td></tr><tr data-parent="data data.from data.from.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i end"></i><i class="table-plus empty"></i>data.from.tx.confirmations</td><td class="api-table-p-type">number</td><td>Number of transaction confirmations</td></tr><tr data-name="data.to" data-parent="data"><td><i class="table-deep-i"></i><i class="table-plus"></i>data.to</td><td class="api-table-p-type">Object</td><td>An object containing information about the currency received by the client and the transaction</td></tr><tr data-parent="data data.to"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.code</td><td class="api-table-p-type">string</td><td>Currency code</td></tr><tr data-parent="data data.to"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.coin</td><td class="api-table-p-type">string</td><td>Common asset ticker</td></tr><tr data-parent="data data.to"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.network</td><td class="api-table-p-type">string</td><td>Blockchain network in which this asset is represented</td></tr><tr data-parent="data data.to"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.name</td><td class="api-table-p-type">string</td><td>Name of currency</td></tr><tr data-parent="data data.to"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.alias</td><td class="api-table-p-type">string</td><td>Alias for creating qr code</td></tr><tr data-parent="data data.to"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.amount</td><td class="api-table-p-type">string</td><td>Amount that the client must to receive</td></tr><tr data-parent="data data.to"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.address</td><td class="api-table-p-type">string</td><td>The destination address to which the funds will be dispatched upon the successful completion of the order</td></tr><tr data-parent="data data.to"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.tag</td><td class="api-table-p-type">string</td><td>MEMO or Destination Tag if required</td></tr><tr data-parent="data data.to"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.addressMix</td><td class="api-table-p-type">string</td><td>Address with a colon-connected tag</td></tr><tr data-name="data.to.tx" data-parent="data data.to"><td><i class="table-deep-i nd"></i><i class="table-deep-i end"></i><i class="table-plus"></i>data.to.tx</td><td class="api-table-p-type">Object</td><td>An object containing data about the sent transaction</td></tr><tr data-parent="data data.to data.to.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.tx.id</td><td class="api-table-p-type">string</td><td>Transaction hash</td></tr><tr data-parent="data data.to data.to.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.tx.amount</td><td class="api-table-p-type">string</td><td>Transaction amount</td></tr><tr data-parent="data data.to data.to.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.tx.fee</td><td class="api-table-p-type">string</td><td>Miner fee</td></tr><tr data-parent="data data.to data.to.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.tx.ccyfee</td><td class="api-table-p-type">string</td><td>Currency of Miner fee</td></tr><tr data-parent="data data.to data.to.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.tx.timeReg</td><td class="api-table-p-type">number</td><td>Transaction registration timestamp</td></tr><tr data-parent="data data.to data.to.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.tx.timeBlock</td><td class="api-table-p-type">number</td><td>Timestamp for adding a transaction to a block</td></tr><tr data-parent="data data.to data.to.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i end"></i><i class="table-plus empty"></i>data.to.tx.confirmations</td><td class="api-table-p-type">number</td><td>Number of transaction confirmations</td></tr><tr data-name="data.back" data-parent="data"><td><i class="table-deep-i"></i><i class="table-plus"></i>data.back</td><td class="api-table-p-type">Object</td><td>An object containing information about the currency returned to the client and the transaction</td></tr><tr data-parent="data data.back"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.back.code</td><td class="api-table-p-type">string</td><td>Currency code</td></tr><tr data-parent="data data.back"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.back.coin</td><td class="api-table-p-type">string</td><td>Common asset ticker</td></tr><tr data-parent="data data.back"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.back.network</td><td class="api-table-p-type">string</td><td>Blockchain network in which this asset is represented</td></tr><tr data-parent="data data.back"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.back.name</td><td class="api-table-p-type">string</td><td>Name of currency</td></tr><tr data-parent="data data.back"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.back.alias</td><td class="api-table-p-type">string</td><td>Alias for creating qr code</td></tr><tr data-parent="data data.back"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.back.amount</td><td class="api-table-p-type">string</td><td>The amount that the client should receive upon return, excluding the miner fee</td></tr><tr data-parent="data data.back"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.back.address</td><td class="api-table-p-type">string</td><td>The return address to which the funds will be sent when choosing a refund</td></tr><tr data-parent="data data.back"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.back.tag</td><td class="api-table-p-type">string</td><td>MEMO or Destination Tag if required</td></tr><tr data-parent="data data.back"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.back.addressMix</td><td class="api-table-p-type">string</td><td>Address with a colon-connected tag</td></tr><tr data-name="data.back.tx" data-parent="data data.back"><td><i class="table-deep-i nd"></i><i class="table-deep-i end"></i><i class="table-plus"></i>data.back.tx</td><td class="api-table-p-type">Object</td><td>An object containing data about the returned transaction</td></tr><tr data-parent="data data.back data.back.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.back.tx.id</td><td class="api-table-p-type">string</td><td>Transaction hash</td></tr><tr data-parent="data data.back data.back.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.back.tx.amount</td><td class="api-table-p-type">string</td><td>Transaction amount</td></tr><tr data-parent="data data.back data.back.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.back.tx.fee</td><td class="api-table-p-type">string</td><td>Miner fee</td></tr><tr data-parent="data data.back data.back.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.back.tx.ccyfee</td><td class="api-table-p-type">string</td><td>Currency of Miner fee</td></tr><tr data-parent="data data.back data.back.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.back.tx.timeReg</td><td class="api-table-p-type">number</td><td>Transaction registration timestamp</td></tr><tr data-parent="data data.back data.back.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.back.tx.timeBlock</td><td class="api-table-p-type">number</td><td>Timestamp for adding a transaction to a block</td></tr><tr data-parent="data data.back data.back.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i end"></i><i class="table-plus empty"></i>data.back.tx.confirmations</td><td class="api-table-p-type">number</td><td>Number of transaction confirmations</td></tr><tr data-name="data.emergency" data-parent="data"><td><i class="table-deep-i end"></i><i class="table-plus"></i>data.emergency</td><td class="api-table-p-type">Object</td><td>An object containing data about the emergency in the order</td></tr><tr data-parent="data data.emergency"><td><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.emergency.status</td><td class="api-table-p-type">Array</td><td>Emergency status. Can be multiple values from:
+						<br>● <span class="api-param-ex">EXPIRED</span> — the transaction was received after the expiration of the order
+						<br>● <span class="api-param-ex">LESS</span> — a transaction was sent with an amount less than in the order
+						<br>● <span class="api-param-ex">MORE</span> — a transaction was sent with an amount greater than in the order
+						<br>● <span class="api-param-ex">LIMIT</span> — a transaction was sent with an amount less or more than the limit; used with <i>LESS</i> or <i>MORE</i></td></tr><tr data-parent="data data.emergency"><td><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.emergency.choice</td><td class="api-table-p-type">string</td><td>user choice. Can be one of the values:
+					<br>● <span class="api-param-ex">NONE</span> — Choice not made
+					<br>● <span class="api-param-ex">EXCHANGE</span> — Continue order at the new market rate
+					<br>● <span class="api-param-ex">REFUND</span> — Make a refund minus the network commission</td></tr><tr data-parent="data data.emergency"><td><i class="table-deep-i no"></i><i class="table-deep-i end"></i><i class="table-plus empty"></i>data.emergency.repeat</td><td class="api-table-p-type">boolean</td><td>if <i>true</i>, then a repeated transaction has been received for this order</td></tr></tbody></table></div>
+</div>
+<div class="api-example"><div class="api-example-title"><span>Example JSON response</span></div>
+<div class="api-example-code-wrapper">
+	<div class="api-example-code">
+		<code>
+			<pre><span class="api-code-punctuation">{</span></pre><pre>&nbsp;&nbsp;<span class="api-code-param">"code"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">0</span>,</pre>
+<pre>&nbsp;&nbsp;<span class="api-code-param">"msg"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">""</span>,</pre>
+<pre>&nbsp;&nbsp;<span class="api-code-param">"data"</span><span class="api-code-punctuation">:</span> <span class="api-code-punctuation">{</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"id"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"TESTID"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"type"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"float"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"email"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">""</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"status"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"NEW"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"time"</span><span class="api-code-punctuation">:</span> <span class="api-code-punctuation">{</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"reg"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">1676458603</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"start"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"finish"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"update"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">1676458603</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"expiration"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">1676460403</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"left"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">1800</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-punctuation">}</span><span class="api-code-punctuation">,</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"from"</span><span class="api-code-punctuation">:</span> <span class="api-code-punctuation">{</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"code"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"BTC"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"coin"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"BTC"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"network"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"BTC"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"name"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"Bitcoin"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"alias"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"bitcoin"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"amount"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"0.50000000"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"address"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"bc1qm8e58htm6qlhz5u7awhe4a5kxt3w86ffwtl9j0"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"addressAlt"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"tag"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"tagName"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"reqConfirmations"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">1</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"maxConfirmations"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">6</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"tx"</span><span class="api-code-punctuation">:</span> <span class="api-code-punctuation">{</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"id"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"amount"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"fee"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"ccyfee"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"timeReg"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"timeBlock"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"confirmations"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-punctuation">}</span><span class="api-code-punctuation">,</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-punctuation">}</span><span class="api-code-punctuation">,</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"to"</span><span class="api-code-punctuation">:</span> <span class="api-code-punctuation">{</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"code"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"USDTTRC"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"coin"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"USDT"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"network"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"TRX"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"name"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"Tether (TRC20)"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"alias"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"usdt"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"amount"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"11062.06500000"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"address"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"TVnbp1VCJ1TpWMom4k3URfFky9FGfPdZPd"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"tag"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"tagName"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"tx"</span><span class="api-code-punctuation">:</span> <span class="api-code-punctuation">{</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"id"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"amount"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"fee"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"ccyfee"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"timeReg"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"timeBlock"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"confirmations"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-punctuation">}</span><span class="api-code-punctuation">,</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-punctuation">}</span><span class="api-code-punctuation">,</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"back"</span><span class="api-code-punctuation">:</span> <span class="api-code-punctuation">{</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"code"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"coin"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"network"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"name"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"alias"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"amount"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"address"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"tag"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"tagName"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"tx"</span><span class="api-code-punctuation">:</span> <span class="api-code-punctuation">{</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"id"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"amount"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"fee"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"ccyfee"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"timeReg"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"timeBlock"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"confirmations"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-punctuation">}</span><span class="api-code-punctuation">,</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-punctuation">}</span><span class="api-code-punctuation">,</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"emergency"</span><span class="api-code-punctuation">:</span> <span class="api-code-punctuation">{</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"status"</span><span class="api-code-punctuation">:</span> <span class="api-code-punctuation">[</span><span class="api-code-punctuation">]</span><span class="api-code-punctuation">,</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"choice"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"NONE"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"repeat"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">0</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-punctuation">}</span><span class="api-code-punctuation">,</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"token"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"TESTTOKENvRB90NOtr397kHY3PJ1VRy2p29HHaN7"</span>,</pre>
+<pre>&nbsp;&nbsp;<span class="api-code-punctuation">}</span><span class="api-code-punctuation">,</span></pre>
+<pre><span class="api-code-punctuation">}</span></pre>		</code>
+	</div>
+</div></div>
+</section></section>
+			<section class="api-section" id="method_order" data-parent="api_methods"><section class="api-request-section"><div class="api-description">
+<h2>Get order details</h2>
+<div class="api-url"><span class="api-url-method post">POST</span><span class="api-url-line"><span class="api-url-protocol">https://</span><span class="api-url-host">ff.io</span><span class="api-url-link">/api/v2/order</span></span></div>
+<p>The method receives the updated order data.</p>
+<h3>Parameters</h3>
+<div class="api-table-wrap"><table class="api-request-table">
+	<thead>
+		<tr><td>Name</td><td>Required</td><td>Type</td><td>Description</td></tr>
+	</thead>
+	<tbody>
+		<tr><td>id</td><td><span class="api-table-p-req">true</span></td><td class="api-table-p-type">string</td><td>Order ID</td></tr>
+		<tr><td>token</td><td><span class="api-table-p-req">true</span></td><td class="api-table-p-type">string</td><td>Order security token received when creating an order in data.token</td></tr>
+	</tbody>
+</table></div>
+</div>
+<div class="api-example"><div class="api-example-title"><span>Example request</span></div>
+<div class="api-example-tabs">
+	<label class="active" data-lang="curl">Curl</label>
+	<label data-lang="python">Python</label>
+	<label data-lang="php">PHP</label>
+</div>
+<div class="api-example-code-wrapper">
+	<div class="api-example-code active" data-lang="curl">
+		<code>
+			<pre><span class="api-code-curl-f">cURL</span> <span class="api-code-curl-h">-X</span> <span class="api-code-curl-x">POST</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"Accept: application/json"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"X-API-KEY: <span class="api-code-curl-const">YOUR_API_KEY</span>"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"X-API-SIGN: <span class="api-code-curl-const">GENERATED_SIGN</span>"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"Content-Type: application/json; charset=UTF-8"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-d</span> <span class="api-code-curl-txt">'{"id":"TESTID","token":"TESTTOKENvRB90NOtr397kHY3PJ1VRy2p29HHaN7"}'</span></pre>  
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-link">"https://ff.io/api/v2/order"</span> <span class="api-code-curl-h">-L</span></pre>
+		</code>
+	</div>
+	<div class="api-example-code" data-lang="python"></div>
+	<div class="api-example-code" data-lang="php">
+		<code>
+			<pre><span class="api-code-php-p">&lt;?php</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-php-u">require_once</span>(<span class="api-code-php-txt">'fixedfloat.php'</span>);</pre>
+			<pre>&nbsp;&nbsp;</pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-php-svar">$</span>ff = <span class="api-code-php-new">new</span> <span class="api-code-php-f">FixedFloatApi</span>(<span class="api-code-php-const">YOUR_API_KEY</span>, <span class="api-code-php-const">YOUR_API_SECRET</span>);</pre>
+			<pre>&nbsp;&nbsp;</pre>
+		    <pre>&nbsp;&nbsp;<span class="api-code-php-svar">$</span>data = <span class="api-code-php-array">array</span>(</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-txt">'id'</span>    =&gt; <span class="api-code-php-txt">'TESTID'</span>,</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-txt">'token'</span> =&gt; <span class="api-code-php-txt">'TESTTOKENvRB90NOtr397kHY3PJ1VRy2p29HHaN7'</span>,</pre>
+		    <pre>&nbsp;&nbsp;);</pre>
+			<pre>&nbsp;&nbsp;</pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-php-f">return</span> <span class="api-code-php-svar">$</span>ff-&gt;<span class="api-code-php-u">order</span>(<span class="api-code-php-svar">$</span>data);</pre>
+			<pre><span class="api-code-php-p">?&gt;</span></pre>
+		</code>
+	</div>
+</div></div>
+</section><section class="api-response-section"><div class="api-description">
+<h3>Response</h3>
+<p>A successful response contains contains an object with information about all the data of the created order</p>
+<div class="api-table-wrap">
+
+<table class="api-response-table"><thead><tr><td>Field</td><td>Type</td><td>Description</td></tr></thead><tbody><tr><td><i class="table-plus empty"></i>code</td><td class="api-table-p-type">number</td><td>Response status code. If the request is successful, then the status code is "0", otherwise it is an error</td></tr><tr><td><i class="table-plus empty"></i>msg</td><td class="api-table-p-type">string</td><td>Status message</td></tr><tr data-name="data"><td><i class="table-plus"></i>data</td><td class="api-table-p-type">Object</td><td>Object with information about all the data of the created order</td></tr><tr data-parent="data"><td><i class="table-deep-i"></i><i class="table-plus empty"></i>data.id</td><td class="api-table-p-type">string</td><td>Order ID. Consists of 6 characters</td></tr><tr data-parent="data"><td><i class="table-deep-i"></i><i class="table-plus empty"></i>data.type</td><td class="api-table-p-type">string</td><td>Order type. Can be one of the values:
+											<br>● <span class="api-param-ex">fixed</span> — fixed rate order
+											<br>● <span class="api-param-ex">float</span> — floating rate order</td></tr><tr data-parent="data"><td><i class="table-deep-i"></i><i class="table-plus empty"></i>data.email</td><td class="api-table-p-type">string</td><td>Email address for the order to receive notifications about changes in the order</td></tr><tr data-parent="data"><td><i class="table-deep-i"></i><i class="table-plus empty"></i>data.status</td><td class="api-table-p-type">string</td><td>Order status. Can be one of the values:
+					<br>● <span class="api-param-ex">NEW</span> — New order
+					<br>● <span class="api-param-ex">PENDING</span> — Transaction received, pending confirmation
+					<br>● <span class="api-param-ex">EXCHANGE</span> — Transaction confirmed, exchange in progress
+					<br>● <span class="api-param-ex">WITHDRAW</span> — Sending funds
+					<br>● <span class="api-param-ex">DONE</span> — Order completed
+					<br>● <span class="api-param-ex">EXPIRED</span> — Order expired
+					<br>● <span class="api-param-ex">EMERGENCY</span> — Emergency, customer choice required</td></tr><tr data-name="data.time" data-parent="data"><td><i class="table-deep-i"></i><i class="table-plus"></i>data.time</td><td class="api-table-p-type">Object</td><td>Object containing timestamp data</td></tr><tr data-parent="data data.time"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.time.reg</td><td class="api-table-p-type">number</td><td>Order creation timestamp</td></tr><tr data-parent="data data.time"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.time.start</td><td class="api-table-p-type">number</td><td>Transaction receive timestamp</td></tr><tr data-parent="data data.time"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.time.finish</td><td class="api-table-p-type">number</td><td>Timestamp when the order was completed</td></tr><tr data-parent="data data.time"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.time.update</td><td class="api-table-p-type">number</td><td>Timestamp of last order update</td></tr><tr data-parent="data data.time"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.time.expiration</td><td class="api-table-p-type">number</td><td>Timestamp when order expires</td></tr><tr data-parent="data data.time"><td><i class="table-deep-i nd"></i><i class="table-deep-i end"></i><i class="table-plus empty"></i>data.time.left</td><td class="api-table-p-type">number</td><td>The number of seconds before the end of the order</td></tr><tr data-name="data.from" data-parent="data"><td><i class="table-deep-i"></i><i class="table-plus"></i>data.from</td><td class="api-table-p-type">Object</td><td>An object containing information about the currency sent by clients and transactions</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.code</td><td class="api-table-p-type">string</td><td>Currency code</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.coin</td><td class="api-table-p-type">string</td><td>Common asset ticker</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.network</td><td class="api-table-p-type">string</td><td>Blockchain network in which this asset is represented</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.name</td><td class="api-table-p-type">string</td><td>Name of currency</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.alias</td><td class="api-table-p-type">string</td><td>Alias for creating qr code</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.amount</td><td class="api-table-p-type">string</td><td>Amount that the client needs to send</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.address</td><td class="api-table-p-type">string</td><td>The destination address to which the user is ought to deposit his funds in order for the trade to execute</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.tag</td><td class="api-table-p-type">string</td><td>MEMO or Destination Tag if required</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.addressMix</td><td class="api-table-p-type">string</td><td>Address with a colon-connected tag</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.reqConfirmations</td><td class="api-table-p-type">number</td><td>Required number of transaction confirmations</td></tr><tr data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.maxConfirmations</td><td class="api-table-p-type">number</td><td>The maximum number of transaction confirmations that system updates</td></tr><tr data-name="data.from.tx" data-parent="data data.from"><td><i class="table-deep-i nd"></i><i class="table-deep-i end"></i><i class="table-plus"></i>data.from.tx</td><td class="api-table-p-type">Object</td><td>An object containing data about the received transaction</td></tr><tr data-parent="data data.from data.from.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.tx.id</td><td class="api-table-p-type">string</td><td>Transaction hash</td></tr><tr data-parent="data data.from data.from.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.tx.amount</td><td class="api-table-p-type">string</td><td>Transaction amount</td></tr><tr data-parent="data data.from data.from.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.tx.fee</td><td class="api-table-p-type">string</td><td>Miner fee</td></tr><tr data-parent="data data.from data.from.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.tx.ccyfee</td><td class="api-table-p-type">string</td><td>Currency of Miner fee</td></tr><tr data-parent="data data.from data.from.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.tx.timeReg</td><td class="api-table-p-type">number</td><td>Transaction registration timestamp</td></tr><tr data-parent="data data.from data.from.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.from.tx.timeBlock</td><td class="api-table-p-type">number</td><td>Timestamp for adding a transaction to a block</td></tr><tr data-parent="data data.from data.from.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i end"></i><i class="table-plus empty"></i>data.from.tx.confirmations</td><td class="api-table-p-type">number</td><td>Number of transaction confirmations</td></tr><tr data-name="data.to" data-parent="data"><td><i class="table-deep-i"></i><i class="table-plus"></i>data.to</td><td class="api-table-p-type">Object</td><td>An object containing information about the currency received by the client and the transaction</td></tr><tr data-parent="data data.to"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.code</td><td class="api-table-p-type">string</td><td>Currency code</td></tr><tr data-parent="data data.to"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.coin</td><td class="api-table-p-type">string</td><td>Common asset ticker</td></tr><tr data-parent="data data.to"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.network</td><td class="api-table-p-type">string</td><td>Blockchain network in which this asset is represented</td></tr><tr data-parent="data data.to"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.name</td><td class="api-table-p-type">string</td><td>Name of currency</td></tr><tr data-parent="data data.to"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.alias</td><td class="api-table-p-type">string</td><td>Alias for creating qr code</td></tr><tr data-parent="data data.to"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.amount</td><td class="api-table-p-type">string</td><td>Amount that the client must to receive</td></tr><tr data-parent="data data.to"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.address</td><td class="api-table-p-type">string</td><td>The destination address to which the funds will be dispatched upon the successful completion of the order</td></tr><tr data-parent="data data.to"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.tag</td><td class="api-table-p-type">string</td><td>MEMO or Destination Tag if required</td></tr><tr data-parent="data data.to"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.addressMix</td><td class="api-table-p-type">string</td><td>Address with a colon-connected tag</td></tr><tr data-name="data.to.tx" data-parent="data data.to"><td><i class="table-deep-i nd"></i><i class="table-deep-i end"></i><i class="table-plus"></i>data.to.tx</td><td class="api-table-p-type">Object</td><td>An object containing data about the sent transaction</td></tr><tr data-parent="data data.to data.to.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.tx.id</td><td class="api-table-p-type">string</td><td>Transaction hash</td></tr><tr data-parent="data data.to data.to.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.tx.amount</td><td class="api-table-p-type">string</td><td>Transaction amount</td></tr><tr data-parent="data data.to data.to.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.tx.fee</td><td class="api-table-p-type">string</td><td>Miner fee</td></tr><tr data-parent="data data.to data.to.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.tx.ccyfee</td><td class="api-table-p-type">string</td><td>Currency of Miner fee</td></tr><tr data-parent="data data.to data.to.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.tx.timeReg</td><td class="api-table-p-type">number</td><td>Transaction registration timestamp</td></tr><tr data-parent="data data.to data.to.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.to.tx.timeBlock</td><td class="api-table-p-type">number</td><td>Timestamp for adding a transaction to a block</td></tr><tr data-parent="data data.to data.to.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i end"></i><i class="table-plus empty"></i>data.to.tx.confirmations</td><td class="api-table-p-type">number</td><td>Number of transaction confirmations</td></tr><tr data-name="data.back" data-parent="data"><td><i class="table-deep-i"></i><i class="table-plus"></i>data.back</td><td class="api-table-p-type">Object</td><td>An object containing information about the currency returned to the client and the transaction</td></tr><tr data-parent="data data.back"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.back.code</td><td class="api-table-p-type">string</td><td>Currency code</td></tr><tr data-parent="data data.back"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.back.coin</td><td class="api-table-p-type">string</td><td>Common asset ticker</td></tr><tr data-parent="data data.back"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.back.network</td><td class="api-table-p-type">string</td><td>Blockchain network in which this asset is represented</td></tr><tr data-parent="data data.back"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.back.name</td><td class="api-table-p-type">string</td><td>Name of currency</td></tr><tr data-parent="data data.back"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.back.alias</td><td class="api-table-p-type">string</td><td>Alias for creating qr code</td></tr><tr data-parent="data data.back"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.back.amount</td><td class="api-table-p-type">string</td><td>The amount that the client should receive upon return, excluding the miner fee</td></tr><tr data-parent="data data.back"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.back.address</td><td class="api-table-p-type">string</td><td>The return address to which the funds will be sent when choosing a refund</td></tr><tr data-parent="data data.back"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.back.tag</td><td class="api-table-p-type">string</td><td>MEMO or Destination Tag if required</td></tr><tr data-parent="data data.back"><td><i class="table-deep-i nd"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.back.addressMix</td><td class="api-table-p-type">string</td><td>Address with a colon-connected tag</td></tr><tr data-name="data.back.tx" data-parent="data data.back"><td><i class="table-deep-i nd"></i><i class="table-deep-i end"></i><i class="table-plus"></i>data.back.tx</td><td class="api-table-p-type">Object</td><td>An object containing data about the returned transaction</td></tr><tr data-parent="data data.back data.back.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.back.tx.id</td><td class="api-table-p-type">string</td><td>Transaction hash</td></tr><tr data-parent="data data.back data.back.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.back.tx.amount</td><td class="api-table-p-type">string</td><td>Transaction amount</td></tr><tr data-parent="data data.back data.back.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.back.tx.fee</td><td class="api-table-p-type">string</td><td>Miner fee</td></tr><tr data-parent="data data.back data.back.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.back.tx.ccyfee</td><td class="api-table-p-type">string</td><td>Currency of Miner fee</td></tr><tr data-parent="data data.back data.back.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.back.tx.timeReg</td><td class="api-table-p-type">number</td><td>Transaction registration timestamp</td></tr><tr data-parent="data data.back data.back.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.back.tx.timeBlock</td><td class="api-table-p-type">number</td><td>Timestamp for adding a transaction to a block</td></tr><tr data-parent="data data.back data.back.tx"><td><i class="table-deep-i nd"></i><i class="table-deep-i no"></i><i class="table-deep-i end"></i><i class="table-plus empty"></i>data.back.tx.confirmations</td><td class="api-table-p-type">number</td><td>Number of transaction confirmations</td></tr><tr data-name="data.emergency" data-parent="data"><td><i class="table-deep-i end"></i><i class="table-plus"></i>data.emergency</td><td class="api-table-p-type">Object</td><td>An object containing data about the emergency in the order</td></tr><tr data-parent="data data.emergency"><td><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.emergency.status</td><td class="api-table-p-type">Array</td><td>Emergency status. Can be multiple values from:
+						<br>● <span class="api-param-ex">EXPIRED</span> — the transaction was received after the expiration of the order
+						<br>● <span class="api-param-ex">LESS</span> — a transaction was sent with an amount less than in the order
+						<br>● <span class="api-param-ex">MORE</span> — a transaction was sent with an amount greater than in the order
+						<br>● <span class="api-param-ex">LIMIT</span> — a transaction was sent with an amount less or more than the limit; used with <i>LESS</i> or <i>MORE</i></td></tr><tr data-parent="data data.emergency"><td><i class="table-deep-i no"></i><i class="table-deep-i"></i><i class="table-plus empty"></i>data.emergency.choice</td><td class="api-table-p-type">string</td><td>user choice. Can be one of the values:
+					<br>● <span class="api-param-ex">NONE</span> — Choice not made
+					<br>● <span class="api-param-ex">EXCHANGE</span> — Continue order at the new market rate
+					<br>● <span class="api-param-ex">REFUND</span> — Make a refund minus the network commission</td></tr><tr data-parent="data data.emergency"><td><i class="table-deep-i no"></i><i class="table-deep-i end"></i><i class="table-plus empty"></i>data.emergency.repeat</td><td class="api-table-p-type">boolean</td><td>if <i>true</i>, then a repeated transaction has been received for this order</td></tr></tbody></table></div>
+</div>
+<div class="api-example"><div class="api-example-title"><span>Example JSON response</span></div>
+<div class="api-example-code-wrapper">
+	<div class="api-example-code">
+		<code>
+			<pre><span class="api-code-punctuation">{</span></pre><pre>&nbsp;&nbsp;<span class="api-code-param">"code"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">0</span>,</pre>
+<pre>&nbsp;&nbsp;<span class="api-code-param">"msg"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">""</span>,</pre>
+<pre>&nbsp;&nbsp;<span class="api-code-param">"data"</span><span class="api-code-punctuation">:</span> <span class="api-code-punctuation">{</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"id"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"TESTID"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"type"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"float"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"email"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">""</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"status"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"NEW"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"time"</span><span class="api-code-punctuation">:</span> <span class="api-code-punctuation">{</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"reg"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">1676458603</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"start"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"finish"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"update"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">1676458603</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"expiration"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">1676460403</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"left"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">1800</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-punctuation">}</span><span class="api-code-punctuation">,</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"from"</span><span class="api-code-punctuation">:</span> <span class="api-code-punctuation">{</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"code"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"BTC"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"coin"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"BTC"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"network"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"BTC"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"name"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"Bitcoin"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"alias"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"bitcoin"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"amount"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"0.50000000"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"address"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"bc1qm8e58htm6qlhz5u7awhe4a5kxt3w86ffwtl9j0"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"addressAlt"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"tag"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"tagName"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"reqConfirmations"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">1</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"maxConfirmations"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">6</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"tx"</span><span class="api-code-punctuation">:</span> <span class="api-code-punctuation">{</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"id"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"amount"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"fee"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"ccyfee"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"timeReg"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"timeBlock"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"confirmations"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-punctuation">}</span><span class="api-code-punctuation">,</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-punctuation">}</span><span class="api-code-punctuation">,</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"to"</span><span class="api-code-punctuation">:</span> <span class="api-code-punctuation">{</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"code"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"USDTTRC"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"coin"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"USDT"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"network"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"TRX"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"name"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"Tether (TRC20)"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"alias"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"usdt"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"amount"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"11062.06500000"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"address"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"TVnbp1VCJ1TpWMom4k3URfFky9FGfPdZPd"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"tag"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"tagName"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"tx"</span><span class="api-code-punctuation">:</span> <span class="api-code-punctuation">{</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"id"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"amount"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"fee"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"ccyfee"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"timeReg"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"timeBlock"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"confirmations"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-punctuation">}</span><span class="api-code-punctuation">,</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-punctuation">}</span><span class="api-code-punctuation">,</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"back"</span><span class="api-code-punctuation">:</span> <span class="api-code-punctuation">{</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"code"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"coin"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"network"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"name"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"alias"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"amount"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"address"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"tag"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"tagName"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"tx"</span><span class="api-code-punctuation">:</span> <span class="api-code-punctuation">{</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"id"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"amount"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"fee"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"ccyfee"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"timeReg"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"timeBlock"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"confirmations"</span><span class="api-code-punctuation">:</span> <span class="api-code-null">null</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-punctuation">}</span><span class="api-code-punctuation">,</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-punctuation">}</span><span class="api-code-punctuation">,</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"emergency"</span><span class="api-code-punctuation">:</span> <span class="api-code-punctuation">{</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"status"</span><span class="api-code-punctuation">:</span> <span class="api-code-punctuation">[</span><span class="api-code-punctuation">]</span><span class="api-code-punctuation">,</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"choice"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"NONE"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"repeat"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">0</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-punctuation">}</span><span class="api-code-punctuation">,</span></pre>
+<pre>&nbsp;&nbsp;<span class="api-code-punctuation">}</span><span class="api-code-punctuation">,</span></pre>
+<pre><span class="api-code-punctuation">}</span></pre>		</code>
+	</div>
+</div></div>
+</section></section>
+			<section class="api-section" id="method_emergency" data-parent="api_methods"><section class="api-request-section"><div class="api-description">
+<h2>Emergency Action Choice</h2>
+<div class="api-url"><span class="api-url-method post">POST</span><span class="api-url-line"><span class="api-url-protocol">https://</span><span class="api-url-host">ff.io</span><span class="api-url-link">/api/v2/emergency</span></span></div>
+<p>Selecting an action (continuation of exchange or return) for an order in the <span class="api-p-header">EMERGENCY</span> status.</p>
+<h3>Parameters</h3>
+<div class="api-table-wrap"><table class="api-request-table">
+	<thead>
+		<tr><td>Name</td><td>Required</td><td>Type</td><td>Description</td></tr>
+	</thead>
+	<tbody>
+		<tr><td>id</td><td><span class="api-table-p-req">true</span></td><td class="api-table-p-type">string</td><td>Order ID</td></tr>
+		<tr><td>token</td><td><span class="api-table-p-req">true</span></td><td class="api-table-p-type">string</td><td>Order security token received when creating an order in data.token</td></tr>
+		<tr>
+			<td>choice</td>
+			<td><span class="api-table-p-req">true</span></td>
+			<td class="api-table-p-type">string</td>
+			<td>Choice of action in the EMERGENCY status. Can be one of the values:
+				<br>● <span class="api-param-ex">EXCHANGE</span> — Continue the exchange at the market rate at the time the selection was made or at the time the order was corrected
+				<br>● <span class="api-param-ex">REFUND</span> — Refund minus miner fee
+			</td>
+		</tr>
+		<tr><td>address</td><td><span class="api-table-p-req">false*</span></td><td class="api-table-p-type">string</td><td>The address to which the refund is to be made. Required if <i>choice</i>="REFUND".</td></tr>
+		<tr><td>tag</td><td><span class="api-table-p-req">false</span></td><td class="api-table-p-type">string</td><td>MEMO or Destination Tag if required</td></tr>
+	</tbody>
+</table></div>
+</div>
+<div class="api-example"><div class="api-example-title"><span>Example request</span></div>
+<div class="api-example-tabs">
+	<label class="active" data-lang="curl">Curl</label>
+	<label data-lang="python">Python</label>
+	<label data-lang="php">PHP</label>
+</div>
+<div class="api-example-code-wrapper">
+	<div class="api-example-code active" data-lang="curl">
+		<code>
+			<pre><span class="api-code-curl-f">cURL</span> <span class="api-code-curl-h">-X</span> <span class="api-code-curl-x">POST</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"Accept: application/json"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"X-API-KEY: <span class="api-code-curl-const">YOUR_API_KEY</span>"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"X-API-SIGN: <span class="api-code-curl-const">GENERATED_SIGN</span>"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"Content-Type: application/json; charset=UTF-8"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-d</span> <span class="api-code-curl-txt">'{"id":"TESTID","token":"TESTTOKENvRB90NOtr397kHY3PJ1VRy2p29HHaN7","choice":"EXCHANGE"}'</span></pre>  
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-link">"https://ff.io/api/v2/emergency"</span> <span class="api-code-curl-h">-L</span></pre>
+		</code>
+	</div>
+	<div class="api-example-code" data-lang="python"></div>
+	<div class="api-example-code" data-lang="php">
+		<code>
+			<pre><span class="api-code-php-p">&lt;?php</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-php-u">require_once</span>(<span class="api-code-php-txt">'fixedfloat.php'</span>);</pre>
+			<pre>&nbsp;&nbsp;</pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-php-svar">$</span>ff = <span class="api-code-php-new">new</span> <span class="api-code-php-f">FixedFloatApi</span>(<span class="api-code-php-const">YOUR_API_KEY</span>, <span class="api-code-php-const">YOUR_API_SECRET</span>);</pre>
+			<pre>&nbsp;&nbsp;</pre>
+		    <pre>&nbsp;&nbsp;<span class="api-code-php-svar">$</span>data = <span class="api-code-php-array">array</span>(</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-txt">'id'</span>    =&gt; <span class="api-code-php-txt">'TESTID'</span>,</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-txt">'token'</span> =&gt; <span class="api-code-php-txt">'TESTTOKENvRB90NOtr397kHY3PJ1VRy2p29HHaN7'</span>,</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-txt">'choice'</span> =&gt; <span class="api-code-php-txt">'EXCHANGE'</span>,</pre>
+		    <pre>&nbsp;&nbsp;);</pre>
+			<pre>&nbsp;&nbsp;</pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-php-f">return</span> <span class="api-code-php-svar">$</span>ff-&gt;<span class="api-code-php-u">emergency</span>(<span class="api-code-php-svar">$</span>data);</pre>
+			<pre><span class="api-code-php-p">?&gt;</span></pre>
+		</code>
+	</div>
+</div></div>
+</section><section class="api-response-section"><div class="api-description">
+<h3>Response</h3>
+<p>A successful response contains <span class="api-p-header">True</span> if the choice in the order has been set.</p>
+<div class="api-table-wrap"><table class="api-response-table"><thead><tr><td>Field</td><td>Type</td><td>Description</td></tr></thead><tbody><tr><td><i class="table-plus empty"></i>code</td><td class="api-table-p-type">number</td><td>Response status code. If the request is successful, then the status code is "0", otherwise it is an error</td></tr><tr><td><i class="table-plus empty"></i>msg</td><td class="api-table-p-type">string</td><td>Status message</td></tr><tr><td><i class="table-plus empty"></i>data</td><td class="api-table-p-type">boolean</td><td>True if successful</td></tr></tbody></table></div>
+</div>
+<div class="api-example"><div class="api-example-title"><span>Example JSON response</span></div>
+<div class="api-example-code-wrapper">
+	<div class="api-example-code">
+		<code>
+			<pre><span class="api-code-punctuation">{</span></pre><pre>&nbsp;&nbsp;<span class="api-code-param">"code"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">0</span>,</pre>
+<pre>&nbsp;&nbsp;<span class="api-code-param">"msg"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">""</span>,</pre>
+<pre>&nbsp;&nbsp;<span class="api-code-param">"data"</span><span class="api-code-punctuation">:</span> <span class="api-code-boolean">true</span>,</pre>
+<pre><span class="api-code-punctuation">}</span></pre>		</code>
+	</div>
+</div></div>
+</section></section>
+			<section class="api-section" id="method_setemail" data-parent="api_methods"><section class="api-request-section"><div class="api-description">
+<h2>Subscribe to notification</h2>
+<div class="api-url"><span class="api-url-method post">POST</span><span class="api-url-line"><span class="api-url-protocol">https://</span><span class="api-url-host">ff.io</span><span class="api-url-link">/api/v2/setEmail</span></span></div>
+<p>Subscribe to receive notifications by email about a change in the status of the selected order.</p>
+<h3>Parameters</h3>
+<div class="api-table-wrap"><table class="api-request-table">
+	<thead>
+		<tr><td>Name</td><td>Required</td><td>Type</td><td>Description</td></tr>
+	</thead>
+	<tbody>
+		<tr><td>id</td><td><span class="api-table-p-req">true</span></td><td class="api-table-p-type">string</td><td>Order ID</td></tr>
+		<tr><td>token</td><td><span class="api-table-p-req">true</span></td><td class="api-table-p-type">string</td><td>Order security token received when creating an order in data.token</td></tr>
+		<tr><td>email</td><td><span class="api-table-p-req">false*</span></td><td class="api-table-p-type">string</td><td>Email address to which email notifications about order status changes should be sent</td></tr>
+	</tbody>
+</table></div>
+</div>
+<div class="api-example"><div class="api-example-title"><span>Example request</span></div>
+<div class="api-example-tabs">
+	<label class="active" data-lang="curl">Curl</label>
+	<label data-lang="python">Python</label>
+	<label data-lang="php">PHP</label>
+</div>
+<div class="api-example-code-wrapper">
+	<div class="api-example-code active" data-lang="curl">
+		<code>
+			<pre><span class="api-code-curl-f">cURL</span> <span class="api-code-curl-h">-X</span> <span class="api-code-curl-x">POST</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"Accept: application/json"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"X-API-KEY: <span class="api-code-curl-const">YOUR_API_KEY</span>"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"X-API-SIGN: <span class="api-code-curl-const">GENERATED_SIGN</span>"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"Content-Type: application/json; charset=UTF-8"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-d</span> <span class="api-code-curl-txt">'{"id":"TESTID","token":"TESTTOKENvRB90NOtr397kHY3PJ1VRy2p29HHaN7","email":"notifyme@gmail.com"}'</span></pre>  
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-link">"https://ff.io/api/v2/setEmail"</span> <span class="api-code-curl-h">-L</span></pre>
+		</code>
+	</div>
+	<div class="api-example-code" data-lang="python"></div>
+	<div class="api-example-code" data-lang="php">
+		<code>
+			<pre><span class="api-code-php-p">&lt;?php</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-php-u">require_once</span>(<span class="api-code-php-txt">'fixedfloat.php'</span>);</pre>
+			<pre>&nbsp;&nbsp;</pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-php-svar">$</span>ff = <span class="api-code-php-new">new</span> <span class="api-code-php-f">FixedFloatApi</span>(<span class="api-code-php-const">YOUR_API_KEY</span>, <span class="api-code-php-const">YOUR_API_SECRET</span>);</pre>
+			<pre>&nbsp;&nbsp;</pre>
+		    <pre>&nbsp;&nbsp;<span class="api-code-php-svar">$</span>data = <span class="api-code-php-array">array</span>(</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-txt">'id'</span>    =&gt; <span class="api-code-php-txt">'TESTID'</span>,</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-txt">'token'</span> =&gt; <span class="api-code-php-txt">'TESTTOKENvRB90NOtr397kHY3PJ1VRy2p29HHaN7'</span>,</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-txt">'email'</span> =&gt; <span class="api-code-php-txt">'notifyme@gmail.com'</span>,</pre>
+		    <pre>&nbsp;&nbsp;);</pre>
+			<pre>&nbsp;&nbsp;</pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-php-f">return</span> <span class="api-code-php-svar">$</span>ff-&gt;<span class="api-code-php-u">setEmail</span>(<span class="api-code-php-svar">$</span>data);</pre>
+			<pre><span class="api-code-php-p">?&gt;</span></pre>
+		</code>
+	</div>
+</div></div>
+</section><section class="api-response-section"><div class="api-description">
+<h3>Response</h3>
+<p>A successful response contains <span class="api-p-header">True</span> if the notification has been subscribed.</p>
+<div class="api-table-wrap"><table class="api-response-table"><thead><tr><td>Field</td><td>Type</td><td>Description</td></tr></thead><tbody><tr><td><i class="table-plus empty"></i>code</td><td class="api-table-p-type">number</td><td>Response status code. If the request is successful, then the status code is "0", otherwise it is an error</td></tr><tr><td><i class="table-plus empty"></i>msg</td><td class="api-table-p-type">string</td><td>Status message</td></tr><tr><td><i class="table-plus empty"></i>data</td><td class="api-table-p-type">boolean</td><td>True if successful</td></tr></tbody></table></div>
+</div>
+<div class="api-example"><div class="api-example-title"><span>Example JSON response</span></div>
+<div class="api-example-code-wrapper">
+	<div class="api-example-code">
+		<code>
+			<pre><span class="api-code-punctuation">{</span></pre><pre>&nbsp;&nbsp;<span class="api-code-param">"code"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">0</span>,</pre>
+<pre>&nbsp;&nbsp;<span class="api-code-param">"msg"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">""</span>,</pre>
+<pre>&nbsp;&nbsp;<span class="api-code-param">"data"</span><span class="api-code-punctuation">:</span> <span class="api-code-boolean">true</span>,</pre>
+<pre><span class="api-code-punctuation">}</span></pre>		</code>
+	</div>
+</div></div>
+</section></section>
+			<section class="api-section" id="method_qr" data-parent="api_methods"><section class="api-request-section"><div class="api-description">
+<h2>Images of QR codes</h2>
+<div class="api-url"><span class="api-url-method post">POST</span><span class="api-url-line"><span class="api-url-protocol">https://</span><span class="api-url-host">ff.io</span><span class="api-url-link">/api/v2/qr</span></span></div>
+<p>Getting a list of images of QR codes for an order</p>
+<h3>Parameters</h3>
+<div class="api-table-wrap"><table class="api-request-table">
+	<thead>
+		<tr><td>Name</td><td>Required</td><td>Type</td><td>Description</td></tr>
+	</thead>
+	<tbody>
+		<tr><td>id</td><td><span class="api-table-p-req">true</span></td><td class="api-table-p-type">string</td><td>Order ID</td></tr>
+		<tr><td>token</td><td><span class="api-table-p-req">true</span></td><td class="api-table-p-type">string</td><td>Order security token received when creating an order in data.token</td></tr>
+	</tbody>
+</table></div>
+</div>
+<div class="api-example"><div class="api-example-title"><span>Example request</span></div>
+<div class="api-example-tabs">
+	<label class="active" data-lang="curl">Curl</label>
+	<label data-lang="python">Python</label>
+	<label data-lang="php">PHP</label>
+</div>
+<div class="api-example-code-wrapper">
+	<div class="api-example-code active" data-lang="curl">
+		<code>
+			<pre><span class="api-code-curl-f">cURL</span> <span class="api-code-curl-h">-X</span> <span class="api-code-curl-x">POST</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"Accept: application/json"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"X-API-KEY: <span class="api-code-curl-const">YOUR_API_KEY</span>"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"X-API-SIGN: <span class="api-code-curl-const">GENERATED_SIGN</span>"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-H</span> <span class="api-code-curl-txt">"Content-Type: application/json; charset=UTF-8"</span> <span class="api-code-curl-n">\</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-h">-d</span> <span class="api-code-curl-txt">'{"id":"TESTID","token":"TESTTOKENvRB90NOtr397kHY3PJ1VRy2p29HHaN7","choice":"EXCHANGE"}'</span></pre>  
+			<pre>&nbsp;&nbsp;<span class="api-code-curl-link">"https://ff.io/api/v2/qr"</span> <span class="api-code-curl-h">-L</span></pre>
+		</code>
+	</div>
+	<div class="api-example-code" data-lang="python"></div>
+	<div class="api-example-code" data-lang="php">
+		<code>
+			<pre><span class="api-code-php-p">&lt;?php</span></pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-php-u">require_once</span>(<span class="api-code-php-txt">'fixedfloat.php'</span>);</pre>
+			<pre>&nbsp;&nbsp;</pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-php-svar">$</span>ff = <span class="api-code-php-new">new</span> <span class="api-code-php-f">FixedFloatApi</span>(<span class="api-code-php-const">YOUR_API_KEY</span>, <span class="api-code-php-const">YOUR_API_SECRET</span>);</pre>
+			<pre>&nbsp;&nbsp;</pre>
+		    <pre>&nbsp;&nbsp;<span class="api-code-php-svar">$</span>data = <span class="api-code-php-array">array</span>(</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-txt">'id'</span>    =&gt; <span class="api-code-php-txt">'TESTID'</span>,</pre>
+		    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-php-txt">'token'</span> =&gt; <span class="api-code-php-txt">'TESTTOKENvRB90NOtr397kHY3PJ1VRy2p29HHaN7'</span>,</pre>
+		    <pre>&nbsp;&nbsp;);</pre>
+			<pre>&nbsp;&nbsp;</pre>
+			<pre>&nbsp;&nbsp;<span class="api-code-php-f">return</span> <span class="api-code-php-svar">$</span>ff-&gt;<span class="api-code-php-u">qr</span>(<span class="api-code-php-svar">$</span>data);</pre>
+			<pre><span class="api-code-php-p">?&gt;</span></pre>
+		</code>
+	</div>
+</div></div>
+</section><section class="api-response-section"><div class="api-description">
+<h3>Response</h3>
+<p>A successful response contains an array of objects with information about the name of the QR code and its image in Base64 format.</p>
+<div class="api-table-wrap"><table class="api-response-table"><thead><tr><td>Field</td><td>Type</td><td>Description</td></tr></thead><tbody><tr><td><i class="table-plus empty"></i>code</td><td class="api-table-p-type">number</td><td>Response status code. If the request is successful, then the status code is "0", otherwise it is an error</td></tr><tr><td><i class="table-plus empty"></i>msg</td><td class="api-table-p-type">string</td><td>Status message</td></tr><tr data-name="data"><td><i class="table-plus"></i>data</td><td class="api-table-p-type">Array</td><td>Array of objects with information about the name of the QR code and its image in Base64 format</td></tr><tr data-parent="data"><td><i class="table-deep-i"></i><i class="table-plus empty"></i>data[].title</td><td class="api-table-p-type">string</td><td>QR code name</td></tr><tr data-parent="data"><td><i class="table-deep-i"></i><i class="table-plus empty"></i>data[].src</td><td class="api-table-p-type">string</td><td>Base64 encoded QR code image</td></tr><tr data-parent="data"><td><i class="table-deep-i end"></i><i class="table-plus empty"></i>data[].checked</td><td class="api-table-p-type">boolean</td><td>If <i>True</i>, then defined as the default QR code</td></tr></tbody></table></div>
+</div>
+<div class="api-example"><div class="api-example-title"><span>Example JSON response</span></div>
+<div class="api-example-code-wrapper">
+	<div class="api-example-code">
+		<code>
+			<pre><span class="api-code-punctuation">{</span></pre><pre>&nbsp;&nbsp;<span class="api-code-param">"code"</span><span class="api-code-punctuation">:</span> <span class="api-code-numeric">0</span>,</pre>
+<pre>&nbsp;&nbsp;<span class="api-code-param">"msg"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">""</span>,</pre>
+<pre>&nbsp;&nbsp;<span class="api-code-param">"data"</span><span class="api-code-punctuation">:</span> <span class="api-code-punctuation">[</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-punctuation">{</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"title"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"With amount"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"src"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQIAAAECAQMAAAAvgUsTAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAjlJREFUaIHdmeFtxSAMhC0xwBuJ1RmJAZBc7s5O+tQJrlGaNuH742LOZ4j4R9dIXPHJ3IE71/kkRyYGthWx8YLnJw8HLjFy5Z6hUSdi4oXDujv4ef8RjsQNLz7rxEUXAuZ3V4IpeDCFd+YWg3ckkHn3J7dScHVefuepBUF1wDz9ub/0w4F4lHlA4xbmj8vpHTMi7lcMZ+UclhPmT3p3rIiB8K4iBD/di39TIG7MXgQhqHaI4JwxfiwtL+L+Gvq0q6YCwpy1UvgQkLmr0XhhzD1njN+MUO3R/I1fc6b404pQ4QytH4V3n9lm1IrQi+oNUpB6R1sABTxhRezZAs2FBBFfmkVotxWhlcMegNZTr+gKZIDciKd80j0fVqMjHd9OBLSA3SaykO4ZPSdDHe3pXAh5Ai0hqp4C7qcV0dWUi4f5J4sD1aPjMSKUhWo+T7WdUzre2xw+BAVO2ZZU6iw/OqMvF0Lm5kjs2uVw2JIol8Mm55Vsdgi5nYgofwPJPhK+PUu4o4uQCVHNsyxavnW0ddyK2Ko6qqD0N4SSe2pSbRsi8zHQyVaTel3NW/lTH0ING+vNVLRKR+0SWhGLdm1pW1N9jpxo93NOhHob7TjL8aAxyHyjNSGeKiN/NmpfI8fbFdgQ2qVlqBpG25ltQ80I7mayN0j1OVHpGLXx4UTMzrZeTp98rNtwJKrh1NlM9PlTpiHxHPupc5ZA/PZ0JkRlYXQd1Yqqg0AvIsuZ6bz8sPbQSa9vpTMg/tH1A833/BcCRiH/AAAAAElFTkSuQmCC"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"checked"</span><span class="api-code-punctuation">:</span> <span class="api-code-boolean">true</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-punctuation">}</span><span class="api-code-punctuation">,</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-punctuation">{</span></pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"title"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"Address"</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"src"</span><span class="api-code-punctuation">:</span> <span class="api-code-string">"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOoAAADqAQMAAACWWksNAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAdtJREFUWIXVmOGtBCEIhEksYEuy9S3JAkw4mAHfu1wDo9nbuH7+4YABNbt2DM9hTz5j2Y6l5/U1c3Vp4/jZjKUA8c0nV4ik8Qwzhr/xON694lfgMCw+gm04ads1ON4bXsmJ2SU4Q4cuiVVE0k+saWIk8IBt/5+v/JbENR5sCtuetPBHOyVxJkC6JCaUzhRNT90UxxExDtExiCbUE5FE85RxCU05Y6dvch4TeZzO4NtbgOCPyQTWxekSh0RCdx5Hf1C9gjQOlyATTuinV5ZVi6ON2X5Vc5MMterpNFDFWHqtot+ZwNiRm6SxcTZZaLE0K6uXNsZfz9CBG3ITgqmrgSoGaNvoD5jXsaaMIZQstChaJ5h4ZJLFZpOHvdpUmRyfPrQx+/Wxqo/3Uk/DPnWcNclhSfY3qfW700MZUzTZyhii/wRTSY8sNsPR46X6UPQzn9mQCePR1wEDBw9kRSWzOLaqUmzFJn1TRxF5nM5ADEFAnVX2eEwWwyUlmnTMrvCq87cs5mChtb4pYHOwTRrXhWnfvwxcO/Jew8TxuR5FZdp/+2iYMq4LUzZkyIrZ1l6A2bKzM7BubvYduBqC6mbq7CSO7biBhz2WKIcGSWPGDeQet0jVGYzWVFl87fgAoKe53k6WtX8AAAAASUVORK5CYII="</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-param">"checked"</span><span class="api-code-punctuation">:</span> <span class="api-code-boolean">false</span>,</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span class="api-code-punctuation">}</span><span class="api-code-punctuation">,</span></pre>
+<pre>&nbsp;&nbsp;<span class="api-code-punctuation">]</span><span class="api-code-punctuation">,</span></pre>
+<pre><span class="api-code-punctuation">}</span></pre>		</code>
+	</div>
+</div>
+<!-- <div class="api-example-title"><span>Example JSON response</span></div>
+<div class="api-example-code-wrapper">
+	<div class="api-example-code">
+		<code>
+			<pre>{</pre>
+			<pre>&nbsp;&nbsp;"code": 0,</pre>
+			<pre>&nbsp;&nbsp;"msg": "",</pre>
+			<pre>&nbsp;&nbsp;"data": [</pre>
+			<pre>&nbsp;&nbsp;&nbsp;&nbsp;{</pre>
+			<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"title": "With amount",</pre>
+			<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQIAAAECAQMAAAAvgUsTAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAjlJREFUaIHdmeFtxSAMhC0xwBuJ1RmJAZBc7s5O+tQJrlGaNuH742LOZ4j4R9dIXPHJ3IE71/kkRyYGthWx8YLnJw8HLjFy5Z6hUSdi4oXDujv4ef8RjsQNLz7rxEUXAuZ3V4IpeDCFd+YWg3ckkHn3J7dScHVefuepBUF1wDz9ub/0w4F4lHlA4xbmj8vpHTMi7lcMZ+UclhPmT3p3rIiB8K4iBD/di39TIG7MXgQhqHaI4JwxfiwtL+L+Gvq0q6YCwpy1UvgQkLmr0XhhzD1njN+MUO3R/I1fc6b404pQ4QytH4V3n9lm1IrQi+oNUpB6R1sABTxhRezZAs2FBBFfmkVotxWhlcMegNZTr+gKZIDciKd80j0fVqMjHd9OBLSA3SaykO4ZPSdDHe3pXAh5Ai0hqp4C7qcV0dWUi4f5J4sD1aPjMSKUhWo+T7WdUzre2xw+BAVO2ZZU6iw/OqMvF0Lm5kjs2uVw2JIol8Mm55Vsdgi5nYgofwPJPhK+PUu4o4uQCVHNsyxavnW0ddyK2Ko6qqD0N4SSe2pSbRsi8zHQyVaTel3NW/lTH0ING+vNVLRKR+0SWhGLdm1pW1N9jpxo93NOhHob7TjL8aAxyHyjNSGeKiN/NmpfI8fbFdgQ2qVlqBpG25ltQ80I7mayN0j1OVHpGLXx4UTMzrZeTp98rNtwJKrh1NlM9PlTpiHxHPupc5ZA/PZ0JkRlYXQd1Yqqg0AvIsuZ6bz8sPbQSa9vpTMg/tH1A833/BcCRiH/AAAAAElFTkSuQmCC",</pre>
+			<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"checked": true,</pre>
+			<pre>&nbsp;&nbsp;&nbsp;&nbsp;},</pre>
+			<pre>&nbsp;&nbsp;&nbsp;&nbsp;{</pre>
+			<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"title": "Address",</pre>
+			<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOoAAADqAQMAAACWWksNAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAdtJREFUWIXVmOGtBCEIhEksYEuy9S3JAkw4mAHfu1wDo9nbuH7+4YABNbt2DM9hTz5j2Y6l5/U1c3Vp4/jZjKUA8c0nV4ik8Qwzhr/xON694lfgMCw+gm04ads1ON4bXsmJ2SU4Q4cuiVVE0k+saWIk8IBt/5+v/JbENR5sCtuetPBHOyVxJkC6JCaUzhRNT90UxxExDtExiCbUE5FE85RxCU05Y6dvch4TeZzO4NtbgOCPyQTWxekSh0RCdx5Hf1C9gjQOlyATTuinV5ZVi6ON2X5Vc5MMterpNFDFWHqtot+ZwNiRm6SxcTZZaLE0K6uXNsZfz9CBG3ITgqmrgSoGaNvoD5jXsaaMIZQstChaJ5h4ZJLFZpOHvdpUmRyfPrQx+/Wxqo/3Uk/DPnWcNclhSfY3qfW700MZUzTZyhii/wRTSY8sNsPR46X6UPQzn9mQCePR1wEDBw9kRSWzOLaqUmzFJn1TRxF5nM5ADEFAnVX2eEwWwyUlmnTMrvCq87cs5mChtb4pYHOwTRrXhWnfvwxcO/Jew8TxuR5FZdp/+2iYMq4LUzZkyIrZ1l6A2bKzM7BubvYduBqC6mbq7CSO7biBhz2WKIcGSWPGDeQet0jVGYzWVFl87fgAoKe53k6WtX8AAAAASUVORK5CYII=",</pre>
+			<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"checked": false,</pre>
+			<pre>&nbsp;&nbsp;&nbsp;&nbsp;}</pre>
+			<pre>&nbsp;&nbsp;]</pre>
+			<pre>}</pre>
+		</code>
+	</div>
+</div> --></div>
+</section></section>
+		</section>
+	</main>
+	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", function() {
+		    let F = UI.func;
+
+		    let content = document.querySelector('.api-content');
+		    let BtnMenuitem = F.id('api_active_menuitem');
+
+		    F.on(content, 'click', 'tr[data-name] > td:first-of-type', function(e) {
+		    	let tr = this.closest('tr');
+		    	let name = tr.getAttribute('data-name');
+		    	let closed = F.hasClass(tr, 'closed');
+		    	let deeps = tr.closest('tbody').querySelectorAll('tr[data-parent~="'+name+'"]');
+		    	let deepsClosed = tr.closest('tbody').querySelectorAll('tr[data-parent~="'+name+'"].closed');
+	    		F.togClass(deeps, 'deepclosed', !closed);
+	    		F.togClass(tr, 'closed', !closed);
+
+	    		if (closed) {
+	    			for (let i = 0; i < deepsClosed.length; i++) {
+	    				let tr = deepsClosed[i];
+				    	let name  = tr.getAttribute('data-name');
+				    	let deeps = tr.closest('tbody').querySelectorAll('tr[data-parent~="'+name+'"]');
+		    			F.addClass(deeps, 'deepclosed');
+	    			}
+	    		}
+		    });
+
+		    F.on(content, 'click', '.api-example-tabs label[data-lang]', function(e) {
+		    	let lang = this.getAttribute('data-lang');
+		    	let samples = content.querySelectorAll('.api-example-code-wrapper .api-example-code[data-lang]');
+		    	let langsamples = content.querySelectorAll('.api-example-code-wrapper .api-example-code[data-lang='+lang+']');
+		    	let tabs = content.querySelectorAll('.api-example-tabs label[data-lang]');
+		    	let langstabs = content.querySelectorAll('.api-example-tabs label[data-lang='+lang+']');
+		    	F.remClass(samples, 'active');
+		    	F.remClass(tabs, 'active');
+		    	F.addClass(langsamples, 'active');
+		    	F.addClass(langstabs, 'active');
+		    })
+
+		    function menuScroll() {
+				let s = document.documentElement.scrollTop;
+				let activeItem = null
+				let parent = null;
+
+				let fix = F.id('header').offsetHeight;
+		    	content.querySelectorAll('.api-section').forEach(function(obj) {
+					if (s >= obj.offsetTop - fix) {
+						activeItem = obj.id;
+						parent = obj.getAttribute('data-parent');
+					}
+		    	})
+
+		    	if (activeItem) {
+			    	let activeMenuItem = document.querySelector('.list-aside .list-head[data-id="'+activeItem+'"]');
+			    	F.remClass(document.querySelectorAll('.list-aside .list-head[data-id]'), 'active');
+			    	F.remClass(document.querySelectorAll('.list-aside .list-head[data-id]'), 'deepactive');
+			    	F.addClass(activeMenuItem, 'active');
+			    	BtnMenuitem.innerHTML = activeMenuItem.textContent;
+			    	if (parent) {
+				    	F.addClass(document.querySelectorAll('.list-aside .list-head[data-id="'+parent+'"]'), 'deepactive');
+			    	}
+		    	}
+		    }
+
+
+		    F.bind(window, 'scroll', function() {
+		    	menuScroll();
+		    })
+	    	menuScroll();
+
+	    	function goTo(target) {
+				clearInterval(scrollInterval);
+				let margin =  +F.id('header').offsetHeight;
+				scrollInterval = F.scrollTop(document.documentElement, target.offsetTop - margin, 500, 30);
+	    	}
+
+	    	F.bind(BtnMenuitem, 'click', function(e) {
+	    		F.togClass(this.parentNode, 'open');
+	    	})
+			F.bind(document, 'click', function(e) {
+				if (!e.target.closest('.api-table-of-content-active')) {
+		    		F.remClass(BtnMenuitem.parentNode, 'open');
+				}
+			})
+
+		    let scrollInterval = -1;
+			F.on('api_table_of_content', 'click', 'a[href^="#"]', function(e) {
+				let target = document.querySelector(this.getAttribute('href'));
+				if (target) {
+					e.preventDefault();
+					goTo(target)
+				}
+			});
+			F.on(content, 'click', 'a.api-p-req[href^="#"]', function(e) {
+				let target = document.querySelector(this.getAttribute('href'));
+				if (target) {
+					e.preventDefault();
+					goTo(target)
+				}
+			});
+
+		})
+	</script>
+
+<div id="fc_frame" class="fc-widget-small" style="bottom: 15px; right: 15px;"><iframe id="fc_widget" name="fc_widget" title="Chat" frameborder="0" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" src="./API _ FixedFloat_files/saved_resource.html"></iframe></div></body></html>
